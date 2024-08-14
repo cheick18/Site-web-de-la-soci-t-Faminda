@@ -1,0 +1,370 @@
+import { AppBar, Box, Button, Drawer, IconButton, List, Menu, MenuItem, Stack, ThemeProvider, Toolbar, useMediaQuery } from '@mui/material'
+import React from 'react'
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+
+import MailIcon from '@mui/icons-material/Mail';
+import { UseContext } from '../Services/UseContext'
+
+import ListSubheader from '@mui/material/ListSubheader';
+import Collapse from '@mui/material/Collapse';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import DraftsIcon from '@mui/icons-material/Drafts';
+import SendIcon from '@mui/icons-material/Send';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import StarBorder from '@mui/icons-material/StarBorder';
+
+import logo from '../Components/logo.png'
+ import logoGloire from './logoGloire.png'
+
+import { Link } from 'react-router-dom'
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import MenuIcon from '@mui/icons-material/Menu';
+
+import  service_travaux from '../images/service_travaux.jpg'
+import  service_etudes from '../images/service_etudes.jpg'
+import  etudes from '../images/etudes.jpg'
+
+
+
+
+
+export default function Navbar() {
+
+
+  
+ 
+    const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
+    const isMd = useMediaQuery((theme) => theme.breakpoints.up('sm'));
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+    const [anchorElLangue, setAnchorElLangue] = React.useState(null);
+    const openLangue = Boolean(anchorElLangue);
+    const handleClickLangue = (event) => {
+      setAnchorElLangue(event.currentTarget);
+    };
+    const handleCloseLangue = () => {
+      setAnchorElLangue(null);
+    };
+
+    /* section drwer */
+    const [openDrawer, setOpenDrawer] = React.useState(false);
+    
+      const [openList, setOpenList] = React.useState(true);
+
+  const handleClickList = () => {
+    setOpenList(!openList);
+  };
+     
+
+  const routeState = {
+    image: service_travaux,
+    title: 'Calcul de structure pour bâtiments à tous usages'
+  }
+const services=[
+  {
+    path: '/service',
+    title: 'Calcul de structures pour bâtiments à tous usages',
+    image: service_travaux,
+    body:{
+      one:'Calcul de structures en béton armé, béton précontraint, charpente métallique et charpente en bois.',
+      two:'Conception et dimensionnement pour des bâtiments résidentiels, industriels, commerciaux, éducatifs, médicaux et autres'
+    }
+  },
+  {
+    path: '/service',
+    title: 'Études architecturales et suivi des projets',
+    image: service_etudes,
+    body:{
+      one:'Analyse technique et conception architecturale.',
+      two:'Documents d’appui tels que plans, coupes, élévations et maquettes numériques.'
+    }
+  },
+  {
+    path: '/service',
+    title: 'Études générales',
+    image: etudes,
+    body:{
+      one:'Planification, gestion de projet, économie, sociologie, météorologie, impact environnemental et qualité',
+      two:'Formation des ressources humaines et mise à niveau.'
+    }
+  },
+  {
+    path: '/service',
+    title: 'Hydraulique urbaine',
+    image: 'path/to/your/image2.jpg',
+    body:{
+      one:'Adduction et distribution d’eau',
+      two:'Assainissement urbain, traitement de l’eau potable et épuration des eaux résiduaires'
+    }
+  },
+  {
+    path: '/service',
+    title: 'Routes, autoroutes et transports',
+    image: 'path/to/your/image2.jpg',
+    body:{
+      one:'Conception et planification de routes, autoroutes et voies ferrées.',
+      two:'Infrastructures aéroportuaires et petits ouvrages (ponceaux, dalots).'
+    }
+  },
+  {
+    path: '/service',
+    title: 'Ouvrages d’art',
+    image: 'path/to/your/image2.jpg',
+    body:{
+      one:'Ponts, aqueducs, réservoirs et tunnels.',
+      two:'Diagnostic d’ouvrages et contrôles non destructifs.'
+    }
+  },
+  {
+    path: '/service',
+    title: 'Barrages',
+    image: 'path/to/your/image2.jpg',
+    body:{
+      one:'Conception et construction de grands barrages et barrages collinaires.',
+     
+    }
+  },
+  {
+    path: '/service',
+    title: 'Travaux maritimes et fluviaux',
+    image: 'path/to/your/image2.jpg',
+    body:{
+      one:'Ports maritimes et fluviaux.',
+      two:'Aménagement des cours d’eau.'
+    }
+  },
+  {
+    path: '/service',
+    title: 'Travaux du génie de défense à caractère spécifique',
+    image: 'path/to/your/image2.jpg',
+    body:{
+      one:'Construction d’abris et de fortifications.',
+      two:'Soutien logistique, mobilité tactique et contre-mobilité.'
+    }
+  },
+  {
+    path: '/service',
+    title: 'Réseaux des fluides pour bâtiments',
+    image: 'path/to/your/image2.jpg',
+    body:{
+      one:'Conception et entretien des infrastructures routières et des réseaux d’assainissement.',
+      two:'Approvisionnement en eau potable.'
+    }
+  },
+  {
+    path: '/service',
+    title: 'Voirie, réseaux d’assainissement et eau potable',
+    image: 'path/to/your/image2.jpg',
+    body:{
+      one:'Adduction et distribution d’eau',
+      two:'Assainissement urbain, traitement de l’eau potable et épuration des eaux résiduaires'
+    }
+  },
+  {
+    path: '/service',
+    title: 'Études d’impact sur l’environnement',
+    image: 'path/to/your/image2.jpg',
+    body:{
+      one:'Évaluations environnementales conformes aux lois et règlements en vigueur.',
+     
+    }
+  },
+    {
+      path: '/service',
+      title: 'Sécurité contre l’incendie dans les constructions',
+      image: 'path/to/your/image2.jpg',
+      body:{
+        one:'Mesures de prévention et de sécurité pour protéger les bâtiments contre les incendies.',
+       
+      }
+  }
+
+  // Ajoutez plus de services ici
+];
+  
+ 
+  
+  return (
+
+    <AppBar position="static" style={{paddingRight:0,paddingLeft:0}}> 
+    <Toolbar style={{ justifyContent:'space-between',backgroundColor:'#252C3C',paddingRight:'4%',paddingLeft:'4%'}}>
+      {isMd&&(<>
+    
+      <img src={logoGloire} alt="Logo" style={{ height: 70 , objectFit:'cover'}}  />
+     
+      <Stack direction='row'spacing={2} >
+<Link to="/">  <Button style={{color:'white'}} >Home</Button></Link> 
+ <Stack> 
+
+  <Button style={{color:'white'}} endIcon={<ArrowDropDownIcon />} id="basic-button"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick} 
+        
+        >Services</Button>  
+       
+  <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+         {services.map((service, index) => (
+        <Link
+          key={index}
+          to={service.path}
+          state={{ title: service.title, image: service.image,body:service.body }}
+          style={{textDecoration:'none', color:'#212121'}}
+        >
+          <MenuItem onClick={handleClose}>{service.title}</MenuItem>
+        </Link>
+      ))} 
+      {/*
+      <Link to='/Service'   state={routeState}   >  <MenuItem onClick={handleClose} >Calcul de strcute pour batiments à tous usages</MenuItem></Link>
+        <MenuItem onClick={handleClose}>Études architecturales et suivi des projets</MenuItem>
+        <MenuItem onClick={handleClose}>Études générales</MenuItem>
+        <MenuItem onClick={handleClose}>Hydrauliques urbaine</MenuItem>
+        <MenuItem onClick={handleClose}>Routes, autoroutes et transports</MenuItem>
+        <MenuItem onClick={handleClose}>Ouvrages d'art</MenuItem>
+        <MenuItem onClick={handleClose}>Barrages</MenuItem>
+        <MenuItem onClick={handleClose}>Travaux maritimes et fluviaux</MenuItem>
+        <MenuItem onClick={handleClose}>Travaux du génie de défense à caractére spécifique</MenuItem>
+      <Link> <MenuItem >Etudes générales</MenuItem></Link> 
+        <MenuItem onClick={handleClose}>Etudes générales</MenuItem>
+        <MenuItem onClick={handleClose}>Etudes générales</MenuItem>
+      */}
+      </Menu>
+</Stack>
+<Link to="/realisations">  <Button style={{color:'white'}}>Réalisations</Button> </Link>
+<Link to="/about">  <Button style={{color:'white'}}>A propos</Button> </Link>
+<Link to="/contact"> <Button style={{color:'white'}}  endIcon={<ArrowDropDownIcon />} id="basic-button"
+        aria-controls={openLangue ? 'basic-Langue' : undefined}
+        aria-haspopup="true"
+        aria-expanded={openLangue ? 'true' : undefined}
+        onClick={handleClickLangue}  >Francais</Button> </Link>
+<Menu
+        id="basic-Langue"
+        anchorEl={anchorElLangue}
+        open={openLangue}
+        onClose={handleCloseLangue}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={handleCloseLangue}>Anglais</MenuItem>
+       
+  
+      </Menu>
+<Link to="/contact">  <Button style={{color:'white'}}>Contactez nous</Button></Link>
+
+    </Stack>
+    </>)}
+    {
+      isXs&&(
+        <>
+        
+        <Stack  direction='row' >
+        <IconButton size="large" edge="start" color="inherit" aria-label="menu" onClick={() => setOpenDrawer(true)} >
+              <MenuIcon />
+            </IconButton>
+            <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
+            <List
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      component="nav"
+      aria-labelledby="nested-list-subheader"
+      subheader={
+        <ListSubheader component="div" id="nested-list-subheader">
+          Nested List Items
+        </ListSubheader>
+      }
+    >
+      <ListItemButton>
+        <ListItemIcon>
+          <SendIcon />
+        </ListItemIcon>
+        <ListItemText primary="Home" />
+      </ListItemButton>
+     
+      <ListItemButton onClick={handleClickList}>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primary="Services" />
+        {openList ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={openList} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary="Starred" />
+          </ListItemButton>
+          
+        </List>
+      </Collapse>
+      <ListItemButton>
+        <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon>
+        <ListItemText primary="Réalisation" />
+      </ListItemButton>
+      <ListItemButton>
+        <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon>
+        <ListItemText primary="A PROPOS" />
+      </ListItemButton>
+      <ListItemButton onClick={handleClickList}>
+        <ListItemIcon>
+          <InboxIcon />
+        </ListItemIcon>
+        <ListItemText primary="Francais" />
+        {openList ? <ExpandLess /> : <ExpandMore />}
+      </ListItemButton>
+      <Collapse in={openList} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <StarBorder />
+            </ListItemIcon>
+            <ListItemText primary="Anglais" />
+          </ListItemButton>
+          
+        </List>
+      </Collapse>
+    </List>
+       
+      </Drawer>
+
+          
+
+        </Stack> 
+        <img src={logo} alt="Logo" style={{ height: 90 , objectFit:'cover'}}  />  
+
+
+
+      
+        </>
+      )
+    }
+    </Toolbar>
+  </AppBar>
+  
+  )
+}
