@@ -6,6 +6,7 @@ import bora from '../Components/bora.png'
 import banque_populaire from '../Components/banque_populaire.png'
 import alakhawayn from '../Components/alakhawayn.png'
 import estem from '../Components/estem.png'
+import { Typography } from '@mui/material';
 
 
 export default function Partenaire() {
@@ -42,6 +43,7 @@ export default function Partenaire() {
                 itemClass="carousel-item"
                 autoPlay={true}
                 >
+              
 
 <div style={{position:'relative',width:'auto', height:'300px'}}>
  <div style={{padding:' 10px', paddingTop:'70px'}}>

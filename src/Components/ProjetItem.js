@@ -2,30 +2,35 @@ import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@
 import React from 'react'
 import travaux_1 from '../images/travaux_1.jpg'
 
-export default function ProjetItem() {
+export default function ProjetItem({title, image, description}) {
   return (
-    <div>
-      
-      <Card sx={{ Width: 'auto',padding:'40px' }} >
+  
+      <div style={{position:'relative',width:'auto', height:'300px'}}>
+      <div style={{padding:'0 10px',}}>
+      <Card sx={{ Width: 'auto',padding:'40px' ,border:'none'}} >
       <CardMedia
-        sx={{ height: 140 }}
-        image={travaux_1}
+        sx={{ height: 160 }}
+        image={image}
         title="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
+        <Typography gutterBottom variant="h7" component="div" sx={{fontWeight:'bold'}}>
+      {title}
         </Typography>
+        {/** 
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+       {description}
         </Typography>
+        */}
       </CardContent>
+      {/*
       <CardActions>
     
         <Button size="small" color='secondary'>Learn More</Button>
       </CardActions>
+      */}
     </Card>
+    </div>
     </div>
   )
 }

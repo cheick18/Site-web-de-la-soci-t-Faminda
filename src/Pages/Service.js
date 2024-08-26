@@ -21,7 +21,7 @@ export default function Services() {
  
   const location = useLocation();
   const image =  location?.state? location.state.image : service_travaux;
-  const title =   location?.state? location.state.title: 'Calcul de structures pour bâtiments à tous usages';
+  const title =  location.state?.title;
   const body= location?.state?  location?.state?.body:  {
     one:'Calcul de structures en béton armé, béton précontraint, charpente métallique et charpente en bois.',
     two:'Conception et dimensionnement pour des bâtiments résidentiels, industriels, commerciaux, éducatifs, médicaux et autres'

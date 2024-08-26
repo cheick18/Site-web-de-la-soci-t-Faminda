@@ -39,10 +39,7 @@ export default function Footer() {
       {isSm &&(<>
         <Grid Item md={5} style={{padding:'0 4%'}}>
         <img src={logoGloire} alt="Logo" style={{ height: 100 , objectFit:'cover'}}  />
-        <Typography variant='body2' textAlign='start' style={{color:'#bdbdbd',paddingBlockEnd:'16px',paddingLeft:'16px'}}>Ut quos unde est voluptatem tempore 33 sunt impedit et tempora
-consequatur qui enim magni. Et vero consequuntur et galisum 
-consequatur ea magnam temporibus ut distinctio nihil id assumenda
-quos non </Typography>
+        <Typography variant='body2' textAlign='start' style={{color:'#bdbdbd',paddingBlockEnd:'16px',paddingLeft:'16px'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines </Typography>
         <Stack direction='row'spacing={1.5} style={{paddingLeft:'24px',paddingBlockEnd:'64px'}}>
         <Fab size="small" color="secondary" aria-label="add"><FacebookOutlinedIcon sx={{color:'white'}} /></Fab>
         <Fab size="small" color="secondary" aria-label="add"><InstagramIcon sx={{color:'white'}} /></Fab>

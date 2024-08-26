@@ -22,8 +22,10 @@ export default function Homes() {
   return (
     <>
      <Header />
+     <Typography variant='h5' align='center' color='#424242' sx={{fontFamily: 'Montserrat, sans-serif', paddingTop:'32px'}}>Nos Partenaires de Référence</Typography>
    
    <Partenaire />
+  
       {isSm&&( 
         <>
           <div style={{height:'500px', position:'relative',fontFamily: 'Montserrat, sans-serif'}} data-aos="fade-zoom-in"
@@ -31,11 +33,9 @@ export default function Homes() {
      data-aos-delay="300"
      data-aos-offset="0">
         <div style={{ width:'600px',position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)'}}>
-     <Typography variant='h5' align='center' color='#424242' sx={{fontFamily: 'Montserrat, sans-serif'}}>Nous construisons l'avenir</Typography>
+     <Typography variant='h5' align='center' color='#424242' sx={{fontFamily: 'Montserrat, sans-serif'}}>Innovations pour un Monde Durable</Typography>
      <div style={{display:'block',height:'24px'}}></div>
-     <Typography variant='body2'  align='center' color='#9e9e9e'  sx={{fontFamily: 'Montserrat, sans-serif'}} >Ut quos unde est voluptatem tempore 33 sunt impedit et tempora
-consequatur qui enim magni. magnam temporibus ut distinctio nihil id assumenda
-quos non recusandae quae. Sit deleniti possimus ut obcae</Typography>
+     <Typography variant='body2'  align='center' color='#9e9e9e'  sx={{fontFamily: 'Montserrat, sans-serif'}} >Chez Faminda Sarl, nous allions créativité et durabilité pour concevoir des espaces respectueux de l'environnement. En intégrant des matériaux écologiques et des solutions énergétiques optimisées, nous créons des projets à la fois fonctionnels et esthétiques. Découvrez comment nos innovations façonnent un avenir plus vert et durable </Typography>
      </div>
      </div>
      </>
@@ -50,7 +50,7 @@ quos non recusandae quae. Sit deleniti possimus ut obcae</Typography>
      <Text_image />
      <FewServices />
 
-     <Video />
+  {/**   <Video />*/} 
      <SpaceBetween />
    <Projects />
    <Footer />

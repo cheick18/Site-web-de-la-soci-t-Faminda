@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 import service_travaux from '../Components/service_travaux.jpg'
 import service_etudes from '../Components/service_etudes.jpg'
+import barages from '../images/barrages.jpg'
+import hydraulique_urbaine from '../images/hydraulique_urbaine.jpg'
 
 
 
@@ -73,7 +75,7 @@ export default function () {
      <Link to=''>
         <div style={{height:isXs?'424px':'608px', width:isXs?'100%':'500px',borderRadius:'8px', backgroundColor:'black' }}  data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom">
-          <img src={service_travaux}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
+          <img src={hydraulique_urbaine}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
 
            <Typography variant='h5'  sx={{fontFamily: 'Montserrat, sans-serif',color:'secondary'}} >Hydraulique urbaine</Typography>  
         </div>
@@ -83,9 +85,9 @@ export default function () {
           <Link to=''>
         <div style={{height:'424px', width:isXs?'100%':'500px',float:'right', borderBlockEnd:'8px', backgroundColor:'black'}}  data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom">  
-          <img src="https://images.pexels.com/photos/2993065/pexels-photo-2993065.jpeg?auto=compress&cs=tinysrgb&w=400"  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
+          <img src={barages}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
         
-          <Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',color:'secondary',textDecoration:'underline'}} >Ouvrages</Typography>
+          <Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',color:'secondary',textDecoration:'underline'}} >Barages</Typography>
             
         </div>
         </Link>

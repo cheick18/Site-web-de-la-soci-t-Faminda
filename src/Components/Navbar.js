@@ -1,5 +1,6 @@
 import { AppBar, Box, Button, Drawer, IconButton, List, Menu, MenuItem, Stack, ThemeProvider, Toolbar, useMediaQuery } from '@mui/material'
 import React from 'react'
+import new_logo_faminda from '../images/new_logo_faminda.png'
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -28,7 +29,16 @@ import MenuIcon from '@mui/icons-material/Menu';
 import  service_travaux from '../images/service_travaux.jpg'
 import  service_etudes from '../images/service_etudes.jpg'
 import  etudes from '../images/etudes.jpg'
-
+import  hydraulique_urbaine from '../images/hydraulique_urbaine.jpg';
+import  routes_autoriutes_transports from '../images/routes_autoriutes_transports.jpg';
+import  ouvrage from '../images/ouvrage.jpg';
+import  barrages from '../images/barrages.jpg';
+import  travaux_genie_defense from '../images/travaux_genie_defense.jpg';
+import  voirie_reseau from '../images/voirie_reseau.jpg';
+import  reseau_fluides from '../images/reseau_fluides.jpg';
+import  etude_impact_envirornement from '../images/etude_impact_envirornement.jpg';
+import  travaux_maritimes from '../images/travaux_maritimes.jpg';
+import  securité from '../images/securité.jpg';
 
 
 
@@ -73,7 +83,7 @@ export default function Navbar() {
   }
 const services=[
   {
-    path: '/service',
+    path: '/calcul-structures-batiments',
     title: 'Calcul de structures pour bâtiments à tous usages',
     image: service_travaux,
     body:{
@@ -82,7 +92,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/etudes-architecturales-suivi-projets',
     title: 'Études architecturales et suivi des projets',
     image: service_etudes,
     body:{
@@ -91,7 +101,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/etudes-generales',
     title: 'Études générales',
     image: etudes,
     body:{
@@ -102,7 +112,7 @@ const services=[
   {
     path: '/service',
     title: 'Hydraulique urbaine',
-    image: 'path/to/your/image2.jpg',
+    image: hydraulique_urbaine,
     body:{
       one:'Adduction et distribution d’eau',
       two:'Assainissement urbain, traitement de l’eau potable et épuration des eaux résiduaires'
@@ -111,7 +121,7 @@ const services=[
   {
     path: '/service',
     title: 'Routes, autoroutes et transports',
-    image: 'path/to/your/image2.jpg',
+    image: routes_autoriutes_transports,
     body:{
       one:'Conception et planification de routes, autoroutes et voies ferrées.',
       two:'Infrastructures aéroportuaires et petits ouvrages (ponceaux, dalots).'
@@ -120,7 +130,7 @@ const services=[
   {
     path: '/service',
     title: 'Ouvrages d’art',
-    image: 'path/to/your/image2.jpg',
+    image: ouvrage,
     body:{
       one:'Ponts, aqueducs, réservoirs et tunnels.',
       two:'Diagnostic d’ouvrages et contrôles non destructifs.'
@@ -129,7 +139,7 @@ const services=[
   {
     path: '/service',
     title: 'Barrages',
-    image: 'path/to/your/image2.jpg',
+    image: barrages,
     body:{
       one:'Conception et construction de grands barrages et barrages collinaires.',
      
@@ -138,7 +148,7 @@ const services=[
   {
     path: '/service',
     title: 'Travaux maritimes et fluviaux',
-    image: 'path/to/your/image2.jpg',
+    image: travaux_maritimes,
     body:{
       one:'Ports maritimes et fluviaux.',
       two:'Aménagement des cours d’eau.'
@@ -147,7 +157,7 @@ const services=[
   {
     path: '/service',
     title: 'Travaux du génie de défense à caractère spécifique',
-    image: 'path/to/your/image2.jpg',
+    image: travaux_genie_defense,
     body:{
       one:'Construction d’abris et de fortifications.',
       two:'Soutien logistique, mobilité tactique et contre-mobilité.'
@@ -156,7 +166,7 @@ const services=[
   {
     path: '/service',
     title: 'Réseaux des fluides pour bâtiments',
-    image: 'path/to/your/image2.jpg',
+    image: reseau_fluides,
     body:{
       one:'Conception et entretien des infrastructures routières et des réseaux d’assainissement.',
       two:'Approvisionnement en eau potable.'
@@ -165,7 +175,7 @@ const services=[
   {
     path: '/service',
     title: 'Voirie, réseaux d’assainissement et eau potable',
-    image: 'path/to/your/image2.jpg',
+    image: voirie_reseau,
     body:{
       one:'Adduction et distribution d’eau',
       two:'Assainissement urbain, traitement de l’eau potable et épuration des eaux résiduaires'
@@ -174,7 +184,7 @@ const services=[
   {
     path: '/service',
     title: 'Études d’impact sur l’environnement',
-    image: 'path/to/your/image2.jpg',
+    image: etude_impact_envirornement,
     body:{
       one:'Évaluations environnementales conformes aux lois et règlements en vigueur.',
      
@@ -183,7 +193,7 @@ const services=[
     {
       path: '/service',
       title: 'Sécurité contre l’incendie dans les constructions',
-      image: 'path/to/your/image2.jpg',
+      image: securité,
       body:{
         one:'Mesures de prévention et de sécurité pour protéger les bâtiments contre les incendies.',
        
@@ -201,7 +211,7 @@ const services=[
     <Toolbar style={{ justifyContent:'space-between',backgroundColor:'#252C3C',paddingRight:'4%',paddingLeft:'4%'}}>
       {isMd&&(<>
     
-      <img src={logoGloire} alt="Logo" style={{ height: 70 , objectFit:'cover'}}  />
+      <img src={new_logo_faminda} alt="Logo" style={{ height: 82 , objectFit:'cover'}}  />
      
       <Stack direction='row'spacing={2} >
 <Link to="/">  <Button style={{color:'white'}} >Home</Button></Link> 

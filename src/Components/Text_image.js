@@ -22,7 +22,7 @@ export default function Text_image({them}) {
           />
           </Grid>
           <Grid item md={5} sx={12} >
-                <Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif'}} > Notre passion pour la cuisine</Typography>
+                <Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif'}} > Nous Construisons L'avenir</Typography>
                 <div style={{display:'block',height:'20px'}}></div>
                 <Typography variant='body2' sx={{fontFamily: 'Montserrat, sans-serif'}} > quos unde est voluptatem tempore 33 sunt impedit et tempora consequatur qui enim magni. magnam temporibus ut distinctio nihil id assumenda</Typography>
                 <div style={{display:'block',height:'20px'}}></div>
