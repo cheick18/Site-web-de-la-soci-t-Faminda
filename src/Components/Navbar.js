@@ -70,7 +70,7 @@ export default function Navbar() {
     /* section drwer */
     const [openDrawer, setOpenDrawer] = React.useState(false);
     
-      const [openList, setOpenList] = React.useState(true);
+      const [openList, setOpenList] = React.useState(false);
 
   const handleClickList = () => {
     setOpenList(!openList);
@@ -110,7 +110,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/hydraulique-urbaine',
     title: 'Hydraulique urbaine',
     image: hydraulique_urbaine,
     body:{
@@ -119,7 +119,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/routes-autoroutes-transports',
     title: 'Routes, autoroutes et transports',
     image: routes_autoriutes_transports,
     body:{
@@ -128,7 +128,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/ouvrages-d-art',
     title: 'Ouvrages d’art',
     image: ouvrage,
     body:{
@@ -137,7 +137,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/barrages',
     title: 'Barrages',
     image: barrages,
     body:{
@@ -146,7 +146,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/travaux-maritimes-fluviaux',
     title: 'Travaux maritimes et fluviaux',
     image: travaux_maritimes,
     body:{
@@ -155,7 +155,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/travaux-genie-defense-caractere-specific',
     title: 'Travaux du génie de défense à caractère spécifique',
     image: travaux_genie_defense,
     body:{
@@ -164,7 +164,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/reseaux-fluides-batiments',
     title: 'Réseaux des fluides pour bâtiments',
     image: reseau_fluides,
     body:{
@@ -173,7 +173,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/voirie-reseaux-assainissement-eau-potable',
     title: 'Voirie, réseaux d’assainissement et eau potable',
     image: voirie_reseau,
     body:{
@@ -182,7 +182,7 @@ const services=[
     }
   },
   {
-    path: '/service',
+    path: '/etudes-impact-environnement',
     title: 'Études d’impact sur l’environnement',
     image: etude_impact_envirornement,
     body:{
@@ -191,7 +191,7 @@ const services=[
     }
   },
     {
-      path: '/service',
+      path: '/securite-contre-incendie-constructions',
       title: 'Sécurité contre l’incendie dans les constructions',
       image: securité,
       body:{
@@ -262,11 +262,13 @@ const services=[
 </Stack>
 <Link to="/realisations">  <Button style={{color:'white'}}>Réalisations</Button> </Link>
 <Link to="/about">  <Button style={{color:'white'}}>A propos</Button> </Link>
+{/*
 <Link to="/contact"> <Button style={{color:'white'}}  endIcon={<ArrowDropDownIcon />} id="basic-button"
         aria-controls={openLangue ? 'basic-Langue' : undefined}
         aria-haspopup="true"
         aria-expanded={openLangue ? 'true' : undefined}
         onClick={handleClickLangue}  >Francais</Button> </Link>
+      */}
 <Menu
         id="basic-Langue"
         anchorEl={anchorElLangue}
@@ -297,67 +299,92 @@ const services=[
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       component="nav"
       aria-labelledby="nested-list-subheader"
-      subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Nested List Items
-        </ListSubheader>
-      }
+    
     >
+      <Link to='/'  style={{textDecoration:'none', color:'#212121'}}>
       <ListItemButton>
+         {/** 
         <ListItemIcon>
           <SendIcon />
         </ListItemIcon>
+       */}
         <ListItemText primary="Home" />
       </ListItemButton>
+      </Link>
      
       <ListItemButton onClick={handleClickList}>
+        {/*
         <ListItemIcon>
           <InboxIcon />
         </ListItemIcon>
+    */}
         <ListItemText primary="Services" />
         {openList ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={openList} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred" />
-          </ListItemButton>
-          
+       
+          {
+            services.map((service, index) => (
+              <Link
+                key={index}
+                to={service.path}
+                state={{ title: service.title, image: service.image,body:service.body }}
+                style={{textDecoration:'none', color:'#212121'}}
+              >
+             
+                <ListItemButton sx={{ pl: 4 }}>
+                <ListItemText primary={service.title} />
+
+                   </ListItemButton>
+              </Link>
+            ))
+          }
         </List>
       </Collapse>
+      <Link to='/realisations'  style={{textDecoration:'none', color:'#212121'}}>
       <ListItemButton>
+        {/*
         <ListItemIcon>
           <DraftsIcon />
         </ListItemIcon>
-        <ListItemText primary="Réalisation" />
+    */}
+        <ListItemText primary="Réalisations" />
       </ListItemButton>
+      </Link>
       <ListItemButton>
+      
+        {/*
         <ListItemIcon>
           <DraftsIcon />
         </ListItemIcon>
-        <ListItemText primary="A PROPOS" />
+    */}
+        <ListItemText primary="A propos" />
       </ListItemButton>
       <ListItemButton onClick={handleClickList}>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
+      
         <ListItemText primary="Francais" />
         {openList ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={openList} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
+          
             <ListItemText primary="Anglais" />
           </ListItemButton>
           
         </List>
       </Collapse>
+      <Link to='/contact'  style={{textDecoration:'none', color:'#212121'}}>
+      <ListItemButton>
+         {/** 
+        <ListItemIcon>
+          <SendIcon />
+        </ListItemIcon>
+       */}
+        <ListItemText primary="Contactez-nous" />
+      </ListItemButton>
+      </Link>
     </List>
        
       </Drawer>

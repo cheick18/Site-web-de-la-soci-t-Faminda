@@ -13,8 +13,11 @@ import student_center_universite_alkhawayne_Ifrane_1 from '../images/projets/stu
 
 import immeuble_appartement_R2_Kinshasa_1 from '../images/projets/immeuble_appartement_R2_Kinshasa_1.png'
 import villa_unifamiliale_Kinshasa_1 from '../images/projets/villa_unifamiliale_Kinshasa_1.png'
-
+import route_ketama_3 from '../images/projets/route_ketama_3.jpg'
+import immeuble_appartement_R3_Kinshasa_1 from '../images/projets/immeuble_appartement_R3_Kinshasa_1.jpg'
+import { useEffect } from 'react';
 export default function Realisations() {
+  const construction ='Construction d’une villa unifamiliale à Kinshasas'
   const CustomLink = styled(Link)(({ theme }) => ({
     textDecoration: 'none',
     color: '#212121',
@@ -95,7 +98,40 @@ export default function Realisations() {
        "path":"/construction-villa-unifamiliale-kinshasa"
     },
     // Ajoutez d'autres produits selon vos besoins
+    {
+      "id": 7,
+      "name": "Construction d’un immeuble appartement R+3 à Kinshasa",
+    
+      "description": "Une tablette légère et facile à utiliser.",
+      "image": immeuble_appartement_R3_Kinshasa_1,
+       "path":"/construction-immeuble-appartements-r3-kinshasa"
+    },
+    {
+      "id": 8,
+      "name": "Construction de la Route Ketama du PK0+000 au PK3+777  dans la commune Ouad El Mkhazine",
+    
+      "description": "Une tablette légère et facile à utiliser.",
+      "image": route_ketama_3,
+       "path":"/construction-route-retama"
+    },
+    {
+      "id": 9,
+      "name": "Construction d’une villa unifamiliale à Kinshasas",
+    
+      "description": "Une tablette légère et facile à utiliser.",
+      "image": villa_unifamiliale_Kinshasa_1,
+       "path":"/construction-villa-unifamiliale-kinshasa"
+    },
   ]
+  useEffect(() => {
+    // Réinitialiser la position de défilement à 0
+    window.scrollTo(0, 0);
+
+  
+    return () => {
+     
+    };
+  }, []);
   return (
     <div>
    
@@ -111,17 +147,19 @@ export default function Realisations() {
         isSm&&(
         
         productData.map((p)=>{
+          
           return(
-            <Grid item md={4} xs={12} style={{ paddingLeft:'16px',paddingRight:'16px'}} key={p.id} >
-  {p.image?<div style={{backgroundColor:'black',height:'200px',borderRadius:'16px'}}  onMouseEnter={onmouseenter} onMouseLeave={onmouseleave}>
+            <Grid item md={4} xs={12} style={{ paddingLeft:'16px',paddingRight:'16px' ,opacity:p.name!=construction?1:0}} key={p.id} >
+  {p.name!=construction?<div style={{backgroundColor:'black',height:'200px',borderRadius:'16px'}}  onMouseEnter={onmouseenter} onMouseLeave={onmouseleave}>
         <Link to={p.path}>
       <img src={p.image} style={{width:'100%', height:'200px',objectFit:'cover',borderRadius:'16px'}}  />
       </Link>
-      </div>: <Skeleton variant='rectangular' sx={{width:'100%',height:'200px',borderRadius:'16px'}} />}
+      </div>: <></>}
       
       
-      <Typography variant='h7' gutterBottom component="div" sx={{paddingBlockStart:'8px',fontWeight:'bold' }}><Link to='/detail' style={{textDecoration:'none',color:'#212121'}}>{p.name ?p.name:<Skeleton  width={160} sx={{margin:'0 auto'}}/>}</Link></Typography>
-      
+ {p.name!=construction? <Typography variant='h7' gutterBottom component="div" sx={{paddingBlockStart:'8px',fontWeight:'bold' }}><Link to='/detail' style={{textDecoration:'none',color:'#212121'}}>{p.name ?p.name:<Skeleton  width={160} sx={{margin:'0 auto'}}/>}</Link></Typography>:<></>}   
+  {/* <Typography variant='h7' gutterBottom component="div" sx={{paddingBlockStart:'8px',fontWeight:'bold' }}><Link to='/detail' style={{textDecoration:'none',color:'#212121'}}>{p.name ?p.name:<Skeleton  width={160} sx={{margin:'0 auto'}}/>}</Link></Typography>
+      */}
       
 </Grid>
 
@@ -135,9 +173,9 @@ export default function Realisations() {
         
         productData.map((p)=>{
           return(
-            <Grid item  xs={12}  key={p.id}  textAlign='center'>
+            <Grid item  xs={12}  key={p.id}  textAlign='center' style={{opacity:p.name!=construction?1:0}}>
   {p.image?<div style={{backgroundColor:'black',height:'200px',borderRadius:'16px'}}  onMouseEnter={onmouseenter} onMouseLeave={onmouseleave}>
-        <Link to='/Deatils'>
+        <Link to={p.path}>
       <img src={p.image} style={{width:'100%', height:'200px',objectFit:'cover',borderRadius:'16px'}}  />
       </Link>
       </div>: <Skeleton variant='rectangular' sx={{width:'100%',height:'200px',borderRadius:'16px'}} />}

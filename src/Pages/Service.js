@@ -9,6 +9,7 @@ import Footer from '../Components/Footer';
 import { Description } from '@mui/icons-material';
 import CheckIcon from '@mui/icons-material/Check';
 import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 
@@ -17,7 +18,15 @@ export default function Services() {
   
   const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
   const isSm = useMediaQuery((theme) => theme.breakpoints.up('sm'));
+  useEffect(() => {
+    // Réinitialiser la position de défilement à 0
+    window.scrollTo(0, 0);
+
   
+    return () => {
+     
+    };
+  }, []);
  
   const location = useLocation();
   const image =  location?.state? location.state.image : service_travaux;

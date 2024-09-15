@@ -10,9 +10,67 @@ import hydraulique_urbaine from '../images/hydraulique_urbaine.jpg'
 
 
 
+
 export default function () {
   const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
   const isSm = useMediaQuery((theme) => theme.breakpoints.up('sm'));
+  const services=[
+
+    {
+      path: '/etudes-architecturales-suivi-projets',
+      title: 'Études architecturales et suivi des projets',
+      image: service_etudes,
+      body:{
+        one:'Analyse technique et conception architecturale.',
+        two:'Documents d’appui tels que plans, coupes, élévations et maquettes numériques.'
+      }
+    },
+    {
+      path: '/calcul-structures-batiments',
+    title: 'Calcul de structures pour bâtiments à tous usages',
+      image: service_travaux,
+      body:{
+        one:'Calcul de structures en béton armé, béton précontraint, charpente métallique et charpente en bois.',
+        two:'Conception et dimensionnement pour des bâtiments résidentiels, industriels, commerciaux, éducatifs, médicaux et autres'
+      }
+    },
+    {
+      path: '/hydraulique-urbaine',
+      title: 'Hydraulique urbaine',
+      image: hydraulique_urbaine,
+      body:{
+        one:'Adduction et distribution d’eau',
+        two:'Assainissement urbain, traitement de l’eau potable et épuration des eaux résiduaires'
+      }
+    },
+
+    {
+      path: '/ouvrages-d-art',
+      title: 'Ouvrages d’art',
+      image: service_travaux,
+      body:{
+        one:'Ponts, aqueducs, réservoirs et tunnels.',
+        two:'Diagnostic d’ouvrages et contrôles non destructifs.'
+      }
+    },
+    {
+      path: '/barrages',
+      title: 'Barrages',
+      image: barages,
+      body:{
+        one:'Conception et construction de grands barrages et barrages collinaires.',
+       
+      }
+    },
+
+ 
+    
+   
+    
+  
+    // Ajoutez plus de services ici
+  ];
+    
   
   useEffect(() => {
     AOS.init({
@@ -42,7 +100,12 @@ export default function () {
          <Grid  item md={12}  sx={{paddingBlockEnd:'64px'}}>   <Typography variant='h4'  sx={{fontFamily: 'Montserrat, sans-serif'}}>Decouvrez notre savoir faire</Typography></Grid>
    
         <Grid  item md={6}  xs={12} sx={{backgroundColor:'white'}}>
-     <Link to=''>
+     <Link 
+       key={services[0].index}
+       to={services[0].path}
+       state={{ title: services[0].title, image: services[0].image,body:services[0].body }}
+
+     >
         <div style={{height:'424px', width:isXs?'100%':'500px',backgroundColor:'black',borderRadius:'8px', }} data-aos="fade-up" 
      data-aos-anchor-placement="bottom-bottom">
           <img src={service_etudes}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
@@ -54,7 +117,9 @@ export default function () {
        
         </Grid>
         <Grid  item md={6}  xs={12} sx={{alignItems:'end',position:'relative',top:isXs?'108px':'0'}}>
-          <Link to='/Service'>
+          <Link  key={services[0].index}
+       to={services[1].path}
+       state={{ title: services[1].title, image: services[1].image,body:services[1].body }}>
         <div style={{height:isXs?'424px':'608px', width:isXs?'100%':'500px',float:'right', borderRadius:'8px',backgroundColor:'black'}} data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom"
      >  
@@ -72,7 +137,9 @@ export default function () {
 
             <Grid  item md={6} xs={12}  sx={{backgroundColor:'white', }}>
               <div style={{height:'90px', display:isXs?'block':'none'}}></div>
-     <Link to=''>
+     <Link  key={services[2].index}
+       to={services[2].path}
+       state={{ title: services[2].title, image: services[2].image,body:services[2].body }}>
         <div style={{height:isXs?'424px':'608px', width:isXs?'100%':'500px',borderRadius:'8px', backgroundColor:'black' }}  data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom">
           <img src={hydraulique_urbaine}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
@@ -82,7 +149,9 @@ export default function () {
         </Link>
         </Grid>
         <Grid  item md={6}  sx={{alignItems:'end',position:'relative',top:isXs?'108px':'0'}}>
-          <Link to=''>
+          <Link  key={services[4].index}
+       to={services[4].path}
+       state={{ title: services[4].title, image: services[4].image,body:services[4].body }}>
         <div style={{height:'424px', width:isXs?'100%':'500px',float:'right', borderBlockEnd:'8px', backgroundColor:'black'}}  data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom">  
           <img src={barages}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>

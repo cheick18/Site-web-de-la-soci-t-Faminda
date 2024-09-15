@@ -3,8 +3,18 @@ import { Box, Grid, Typography } from '@mui/material'
 import description from '../Components/description.jpg'
 import React from 'react'
 
-
+import student_center_universite_alkhawayne_Ifrane_1 from '../images/projets/student_center_universite_alkhawayne_Ifrane_1.jpg'
+import { useEffect } from 'react';
 export default function About() {
+  useEffect(() => {
+    // Réinitialiser la position de défilement à 0
+    window.scrollTo(0, 0);
+
+  
+    return () => {
+     
+    };
+  }, []);
   return (
     <div>
      
@@ -36,18 +46,20 @@ export default function About() {
 
     </div>
 
-    <Grid container>
-      <Grid item md={5} >
-<Typography variant='h4'>Bienvenu chez Faminda</Typography>
+    <Grid container sx={{paddingLeft:'4%',height:'400px',paddingTop:'98px'}}>
+      <Grid item md={5} justifyContent='center' >
+<Typography variant='h4' >Bienvenu chez Faminda</Typography>
 <div style={{display:'block',height:'24px'}}></div>
-        <Typography variant='body3' align='center' style={{fontFamily:'Montserrat, sans-serif'}}>tempore 33 sunt impedit et tempora
-consequatur qui enim magni. Et vero consequuntur et galisum 
-consequatur ea magnam temporibus ut distinctio nihil id assumenda
-quos non recusandae quae. Sit deleniti possimus ut obcae</Typography>
+        <Typography variant='body3' align='center' style={{fontFamily:'Montserrat, sans-serif'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines</Typography>
 <div style={{display:'block',height:'16px'}}></div>
 
       </Grid>
-      <Grid>
+      <Grid item md={6} sx={{position:'relative', right:0}}>
+        <div>
+        <img src={student_center_universite_alkhawayne_Ifrane_1}  style={{width:'100%', height:'100%', objectFit:'cover'}}/>
+        </div>
+    
+        
         
         </Grid>
 

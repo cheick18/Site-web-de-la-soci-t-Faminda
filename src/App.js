@@ -8,7 +8,12 @@ import Navbar from './Components/Navbar';
 import  logo from './Components/logo.png';
 import  ConstructionCentreculturelBerkane from '../src/Pages/ConstructionCentreculturelBerkane'
 import RefectionEquipement from '../src/Pages/RefectionEquipement'
+import ContructionStudentCenter from '../src/Pages/ContructionStudentCenter'
 import ConstructionExtensionAcademique from '../src/Pages/ConstructionExtensionAcademique'
+import ConstructionImmeubleKinshasa from '../src/Pages/ConstructionImmeubleKinshasa'
+import VillaKishasa from '../src/Pages/VillaKishasa'
+import RouteKetama from '../src/Pages/RouteKetama'
+import Vllakishasar3 from '../src/Pages/Vllakishasar3'
 
 
 
@@ -77,16 +82,27 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/realisations" element={<Realisations />} />
           
-            <Route path="/service" element={<Service />} />
+          {/** <Route path="/service" element={<Service />} /> */} 
           <Route path="/calcul-structures-batiments" element={<Service />} />
           <Route path="/etudes-architecturales-suivi-projets" element={<Service />} />
           <Route path="/etudes-generales" element={<Service />} />
+          <Route path="/barrages" element={<Service />} />
+          <Route path="/hydraulique-urbaine" element={<Service />} />
+          <Route path="/routes-autoroutes-transports" element={<Service />} />
+          <Route path="/ouvrages-d-art" element={<Service />} />
+          <Route path="/travaux-maritimes-fluviaux" element={<Service />} />
+          <Route path="/travaux-genie-defense-caractere-specific" element={<Service />} />
+          <Route path="/reseaux-fluides-batiments" element={<Service />} />
+          <Route path="/voirie-reseaux-assainissement-eau-potable" element={<Service />} />
+          <Route path="/etudes-impact-environnement" element={<Service />} />
+          <Route path="/securite-contre-incendie-constructions" element={<Service />} />
           {/**routes realisation detail  Construction-centreculturel-Berkane
            * 
            * construction-student-center-universite-al-khawayne-ifrane
            * construction-immeuble-appartement-r2-kinshasa
            * construction-villa-unifamiliale-kinshasa
-
+              construction-student-center-universite-al-khawayne-ifrane
+               construction-route-retama
 
 
            */}
@@ -95,7 +111,14 @@ function App() {
            
           <Route path="/construction-extension-academique-universite-al-khawayne-ifrane" element={<ConstructionExtensionAcademique />} />
           <Route path="/construction-immeuble-appartement-r2-kinshasa" element={<RefectionEquipement />} />
-          <Route path="/construction-villa-unifamiliale-kinshasa" element={<RefectionEquipement />} />
+          <Route path="/construction-villa-unifamiliale-kinshasa" element={<VillaKishasa />} />
+          <Route path="/construction-student-center-universite-al-khawayne-ifrane" element={<ContructionStudentCenter />} />
+          <Route path="/construction-immeuble-appartements-r2-kinshasa" element={<ConstructionImmeubleKinshasa />} />
+          <Route path="/construction-route-retama" element={<RouteKetama />} />
+          <Route path="/construction-immeuble-appartements-r3-kinshasa" element={<Vllakishasar3 />} />
+            
+            
+            
             
             
             

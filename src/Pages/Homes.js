@@ -1,5 +1,5 @@
 import { Box, Typography, useMediaQuery } from '@mui/material';
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Components/Header';
 import Text_image from '../Components/Text_image';
 import FewServices from '../Components/FewServices';
@@ -16,9 +16,20 @@ import Partenaire from '../Components/Partenaire';
 
 
 
+
 export default function Homes() {
     const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
     const isSm = useMediaQuery((theme) => theme.breakpoints.up('sm'));
+    useEffect(() => {
+      // Réinitialiser la position de défilement à 0
+      window.scrollTo(0, 0);
+  
+    
+      return () => {
+       
+      };
+    }, []);
+    
   return (
     <>
      <Header />
