@@ -118,7 +118,7 @@ export default function DetailRealisation() {
           📏
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary=" Surface réalisée " secondary="3 000 m²" />
+        <ListItemText primary=" Surface réalisée " secondary="1000 m²" />
       </ListItem>
       <Divider variant="inset" component="li" />
       <ListItem>
@@ -128,7 +128,7 @@ export default function DetailRealisation() {
           🏙️
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary=" Ville " secondary="Berkane" />
+        <ListItemText primary=" Ville " secondary="Kinshasa" />
       </ListItem>
       <Divider variant="inset" component="li" />
       <ListItem>
@@ -138,7 +138,7 @@ export default function DetailRealisation() {
             
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Mission" secondary="Etude technique" />
+        <ListItemText primary="Mission" secondary="Conception architecturale, Etudes techniques et OPC" />
       </ListItem>
       <Divider variant="inset" component="li" />
       <ListItem>

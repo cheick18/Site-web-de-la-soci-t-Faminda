@@ -115,7 +115,7 @@ export default function DetailRealisation() {
           🏙️
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary=" Ville " secondary="Berkane" />
+        <ListItemText primary=" Ville " secondary="Kinshasa" />
       </ListItem>
       <Divider variant="inset" component="li" />
       <ListItem>
@@ -125,7 +125,7 @@ export default function DetailRealisation() {
             
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Mission" secondary="Etude technique" />
+        <ListItemText primary="Mission" secondary="Conception architecturale, Etudes techniques et OPC" />
       </ListItem>
       <Divider variant="inset" component="li" />
       <ListItem>
@@ -134,7 +134,7 @@ export default function DetailRealisation() {
           📅
           </Avatar >
         </ListItemAvatar>
-        <ListItemText primary="Date" secondary="2023-2024" />
+        <ListItemText primary="Date" secondary="2019-2022" />
       </ListItem>
       <Divider variant="inset" component="li" />
     

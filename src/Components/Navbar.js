@@ -211,7 +211,7 @@ const services=[
     <Toolbar style={{ justifyContent:'space-between',backgroundColor:'#252C3C',paddingRight:'4%',paddingLeft:'4%'}}>
       {isMd&&(<>
     
-      <img src={new_logo_faminda} alt="Logo" style={{ height: 82 , objectFit:'cover'}}  />
+        <Link to="/"> <img src={new_logo_faminda} alt="Logo" style={{ height: 82 , objectFit:'cover'}}  /> </Link>
      
       <Stack direction='row'spacing={2} >
 <Link to="/">  <Button style={{color:'white'}} >Home</Button></Link> 
@@ -261,7 +261,7 @@ const services=[
       </Menu>
 </Stack>
 <Link to="/realisations">  <Button style={{color:'white'}}>Réalisations</Button> </Link>
-<Link to="/about">  <Button style={{color:'white'}}>A propos</Button> </Link>
+<Link to="/about">  <Button style={{color:'white'}}>À propos</Button> </Link>
 {/*
 <Link to="/contact"> <Button style={{color:'white'}}  endIcon={<ArrowDropDownIcon />} id="basic-button"
         aria-controls={openLangue ? 'basic-Langue' : undefined}
@@ -282,7 +282,7 @@ const services=[
        
   
       </Menu>
-<Link to="/contact">  <Button style={{color:'white'}}>Contactez nous</Button></Link>
+<Link to="/contact">  <Button style={{color:'white'}}>Contactez-nous</Button></Link>
 
     </Stack>
     </>)}
@@ -301,8 +301,8 @@ const services=[
       aria-labelledby="nested-list-subheader"
     
     >
-      <Link to='/'  style={{textDecoration:'none', color:'#212121'}}>
-      <ListItemButton>
+      <Link to='/'  style={{textDecoration:'none', color:'#212121'}} onClick={()=>setOpenDrawer(false)} >
+      <ListItemButton >
          {/** 
         <ListItemIcon>
           <SendIcon />
@@ -331,6 +331,7 @@ const services=[
                 to={service.path}
                 state={{ title: service.title, image: service.image,body:service.body }}
                 style={{textDecoration:'none', color:'#212121'}}
+                onClick={()=>setOpenDrawer(false)}
               >
              
                 <ListItemButton sx={{ pl: 4 }}>
@@ -352,6 +353,7 @@ const services=[
         <ListItemText primary="Réalisations" />
       </ListItemButton>
       </Link>
+      <Link to='/about' style={{textDecoration:'none', color:'#212121'}} >
       <ListItemButton>
       
         {/*
@@ -359,23 +361,30 @@ const services=[
           <DraftsIcon />
         </ListItemIcon>
     */}
-        <ListItemText primary="A propos" />
+        <ListItemText primary="À propos" />
       </ListItemButton>
+      </Link>
+      {/** 
       <ListItemButton onClick={handleClickList}>
+      
       
         <ListItemText primary="Francais" />
         {openList ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
+      */}
+      {/*
       <Collapse in={openList} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItemButton sx={{ pl: 4 }}>
           
             <ListItemText primary="Anglais" />
           </ListItemButton>
+   
           
         </List>
       </Collapse>
-      <Link to='/contact'  style={{textDecoration:'none', color:'#212121'}}>
+       */}
+      <Link to='/contact'  style={{textDecoration:'none', color:'#212121'}}  onClick={()=>setOpenDrawer(false)}>
       <ListItemButton>
          {/** 
         <ListItemIcon>
@@ -392,7 +401,8 @@ const services=[
           
 
         </Stack> 
-        <img src={logo} alt="Logo" style={{ height: 90 , objectFit:'cover'}}  />  
+        <Link to='/'  onClick={()=>setOpenDrawer(false)} >
+        <img src={logo} alt="Logo" style={{ height: 90 , objectFit:'cover'}}  />  </Link>
 
 
 

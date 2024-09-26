@@ -56,7 +56,10 @@ export default function Contact() {
         </Box>
         <Box sx={{ backgroundColor: 'transparent', height: '470px', display: 'block', position: 'absolute', top: 0, zIndex: 405, width: '100%', opacity: 1 }}>
           <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
-          <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif',fontWeight:'bold',opacity:'1!important'}} >Contactez-nous</Typography>
+            {isSm&&(  <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif',fontWeight:'bold',opacity:'1!important'}} >Contactez-nous</Typography>
+         )}
+             {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif',fontWeight:'bold',opacity:'1!important'}} >Contactez-nous</Typography>
+         )}
           </div>
         </Box>
       </div>
@@ -112,6 +115,20 @@ export default function Contact() {
                     sx={{ width: isSm ? '90%' : '100%' }}
                   />
                 </Grid>
+                <Grid item md={12} xs={12} sx={{  paddingBlockStart: '40px' }}>
+                  <TextField
+                    label='organisme'
+                    id="filled-size-small3"
+                    value={EMail}
+                    onChange={handleChangeMail}
+                    variant="outlined"
+                    size="small"
+                    sx={{ width: '100%' }}
+                  />
+                </Grid>
+                <Grid item xs={12} md={12}>
+
+                </Grid>
                 <Grid item md={12} xs={12} sx={{ paddingBlockStart: '40px' }}>
                   <TextField
                     label={message}
@@ -137,7 +154,7 @@ export default function Contact() {
                     <Typography color='secondary' variant='body2'>Ligne standard</Typography>
                     <Typography color='primary' variant='subtitle1'>+212 665 799 909</Typography>
                     <Typography color='secondary' variant='body2'>Email</Typography>
-                    <Typography color='primary' variant='subtitle1'>famindaconcept@gmail.com</Typography>
+                    <Typography color='primary' variant='subtitle1'>contact@famindaconcept.com</Typography>
                     <Typography color='secondary' variant='body2'>Adresse</Typography>
                     <Typography color='primary' variant='subtitle1'>45 rue atlas etg4 n16 maarif Casablanca</Typography>
                   </CardContent>

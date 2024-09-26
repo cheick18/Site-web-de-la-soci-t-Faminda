@@ -6,10 +6,14 @@ import bora from '../Components/bora.png'
 import banque_populaire from '../Components/banque_populaire.png'
 import alakhawayn from '../Components/alakhawayn.png'
 import estem from '../Components/estem.png'
-import { Typography } from '@mui/material';
+import cafigec from '../images/cafigec.jpeg'
+
+import { Typography, useMediaQuery } from '@mui/material';
 
 
 export default function Partenaire() {
+  const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
+    const isMd = useMediaQuery((theme) => theme.breakpoints.up('sm'));
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -55,6 +59,7 @@ export default function Partenaire() {
  <img src={cih}   style={{width:'100%', height:'200px'}}  />
     </div>
  </div>
+
  <div style={{position:'relative',width:'auto', height:'100px'}}>
  <div style={{padding:'60px 10px',paddingTop:'80px'}}>
  <img src={bora}   style={{width:'100%', height:'50px',objectFit:'contain'}}  />
@@ -75,6 +80,12 @@ export default function Partenaire() {
  <img src={alakhawayn}   style={{width:'100%', height:'70px', objectFit:'contain'}}  />
     </div>
  </div>
+ <div style={{position:'relative',width:'auto', height:'150px'}}>
+ <div style={{padding:' 10px', paddingTop:'10px'}}>
+ <img src={cafigec}   style={{width: isXs?'100%':'80%', height:'5%', objectFit:'contain'}}  />
+    </div>
+ </div>
+
  </Carousel>
 
  {/*

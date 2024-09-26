@@ -7,6 +7,7 @@ import slide1 from './slide1.jpg'
 import App from './../App.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from 'react-router-dom';
 
 
 
@@ -50,11 +51,13 @@ const responsive = {
          <Box >
          <div style={{display:'block',height:'88px'}}></div> 
   
-        <Typography variant="h1" style={{fontSize:'2.986rem',color:'white',fontFamily: 'Montserrat, sans-serif',fontWeight:'bold'}} >Faminda, Buréau d'etude en Artchitecture</Typography>
+        <Typography variant="h1" style={{fontSize:'2.986rem',color:'white',fontFamily: 'Montserrat, sans-serif',fontWeight:'bold'}} >Faminda Concept, Bureau d'Étude en Génie Civil et Architecture</Typography>
         <div style={{display:'block',height:'24px'}}></div>
         <Typography variant='body' align='center' style={{color:'white',fontFamily: 'Montserrat, sans-serif'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines</Typography>
 <div style={{display:'block',height:'16px'}}></div>
-<Button size="large" variant='contained' color='primary' startIcon={<MailIcon />}>Contactez nous</Button>
+<Link to='/contact'>
+<Button size="large" variant='contained' color='primary' startIcon={<MailIcon />}>Contactez-nous</Button>
+</Link>
      </Box>
          </Grid>
          </Grid>
@@ -70,11 +73,13 @@ const responsive = {
 
          <Box >
    <div style={{display:'block',height:'88px'}}></div> 
-        <Typography variant="h1" style={{fontSize:'2.986rem',color:'white',fontFamily:'Montserrat, sans-serif', fontWeight:'bold'}} >Faminda, Buréau d'etude en Artchitecture</Typography>
+        <Typography variant="h1" style={{fontSize:'2.986rem',color:'white',fontFamily:'Montserrat, sans-serif', fontWeight:'bold'}} >Faminda Concept, Bureau d'Étude en Génie Civil et Architecture</Typography>
         <div style={{display:'block',height:'24px'}}></div>
         <Typography variant='body3' align='center' style={{color:'white',fontFamily:'Montserrat, sans-serif'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines</Typography>
 <div style={{display:'block',height:'16px'}}></div>
+<Link to='/contact'>
 <Button size="large" variant='contained' color='primary' startIcon={<MailIcon />}>Contactez nous</Button>
+</Link>
      </Box>
          </Grid>
          </Grid>

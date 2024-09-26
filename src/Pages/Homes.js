@@ -33,7 +33,7 @@ export default function Homes() {
   return (
     <>
      <Header />
-     <Typography variant='h5' align='center' color='#424242' sx={{fontFamily: 'Montserrat, sans-serif', paddingTop:'32px'}}>Nos Partenaires de Référence</Typography>
+     <Typography variant='h5' align='center' color='#424242' sx={{fontFamily: 'Montserrat, sans-serif', paddingTop:'32px'}}>Confiance Partagée avec Nos Partenaires</Typography>
    
    <Partenaire />
   
@@ -63,6 +63,13 @@ export default function Homes() {
 
   {/**   <Video />*/} 
      <SpaceBetween />
+     {isSm&&( <Typography variant='h4'  sx={{fontFamily: 'Montserrat, sans-serif', paddingBlockEnd:'48px',textAlign:'center'}}>À Découvrir : Nos Projets</Typography>
+  )}
+      {isXs&&( <Typography variant='h5'  sx={{fontFamily: 'Montserrat, sans-serif', paddingBlockEnd:'48px',textAlign:'center'}}>À Découvrir : Nos Projets</Typography>
+  )}
+     
+     
+    
    <Projects />
    <Footer />
     </>

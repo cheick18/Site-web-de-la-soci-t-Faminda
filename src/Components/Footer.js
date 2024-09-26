@@ -4,6 +4,7 @@ import React from 'react'
 
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import logoGloire from '../Components/logoGloire.png'
@@ -12,6 +13,9 @@ import { Link } from 'react-router-dom';
 
 
 export default function Footer() {
+  const phoneNumber = '+212771676213'; // Remplace par le numéro de téléphone
+const whatsappLink = `https://wa.me/${phoneNumber}`;
+
     const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
     const isSm = useMediaQuery((theme) => theme.breakpoints.up('sm'));
     
@@ -44,6 +48,7 @@ export default function Footer() {
         <Stack direction='row'spacing={1.5} style={{paddingLeft:'24px',paddingBlockEnd:'64px'}}>
         <Fab size="small" color="secondary" aria-label="add"><FacebookOutlinedIcon sx={{color:'white'}} /></Fab>
         <Fab size="small" color="secondary" aria-label="add"><InstagramIcon sx={{color:'white'}} /></Fab>
+        <Link to={whatsappLink}> <Fab size="small" color="secondary" aria-label="add"> <WhatsAppIcon sx={{ color: 'white' }} /> </Fab></Link> 
         <Fab size="small" color="secondary" aria-label="add"><LinkedInIcon sx={{color:'white'}} /></Fab>
         <Fab size="small" color="secondary" aria-label="add"><YouTubeIcon sx={{color:'white'}}/></Fab>
         </Stack>
@@ -71,7 +76,9 @@ export default function Footer() {
     <hr style={{opacity:0.1}}></hr>
   </Grid>
     <Grid  item md={5} style={{paddingLeft:'5%'}}> 
-    <Typography variant='subtitle2' style={{color:'#bdbdbd'}}>&copy; 2024 Faminda. Tous droits réservés.</Typography>
+    <Typography variant='subtitle2' style={{color:'#bdbdbd'}}>&copy; 2024 Faminda  Concept. Tous droits réservés | <Link to="https://www.linkedin.com/in/cheick-wague-622148212/" style={{textDecoration:'none',color:'gray'}}> By Cheick</Link></Typography>
+  
+  
     </Grid>
 
 </>)}
@@ -85,6 +92,7 @@ isXs &&(
         <Stack direction='row'spacing={1.5} style={{paddingBlockEnd:'64px'}} justifyContent='center'>
         <Fab size="small" color="secondary" aria-label="add"><FacebookOutlinedIcon sx={{color:'white'}} /></Fab>
         <Fab size="small" color="secondary" aria-label="add"><InstagramIcon  sx={{color:'white'}}  /></Fab>
+      <Link to={whatsappLink}> <Fab size="small" color="secondary" aria-label="add"> <WhatsAppIcon sx={{ color: 'white' }} /> </Fab></Link> 
         <Fab size="small" color="secondary" aria-label="add"><LinkedInIcon  sx={{color:'white'}} /></Fab>
         <Fab size="small" color="secondary" aria-label="add"><YouTubeIcon  sx={{color:'white'}} /></Fab>
         </Stack>
@@ -149,7 +157,7 @@ isXs &&(
     <hr style={{opacity:0.1}}></hr>
   </Grid>
     <Grid item  xs={12} style={{paddingLeft:'5%'}} > 
-    <Typography variant='subtitle2' style={{color:'#bdbdbd'}}>&copy; 2024 Faminda. Tous droits réservés.</Typography>
+    <Typography variant='subtitle2' style={{color:'#bdbdbd'}}>&copy; 2024 Faminda Concept. Tous droits réservés | <Link to="https://www.linkedin.com/in/cheick-wague-622148212/" style={{textDecoration:'none',color:'gray'}}> By Cheick</Link></Typography>
     </Grid>
   </>
 )

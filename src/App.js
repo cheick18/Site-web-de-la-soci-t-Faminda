@@ -114,7 +114,7 @@ function App() {
           <Route path="/construction-villa-unifamiliale-kinshasa" element={<VillaKishasa />} />
           <Route path="/construction-student-center-universite-al-khawayne-ifrane" element={<ContructionStudentCenter />} />
           <Route path="/construction-immeuble-appartements-r2-kinshasa" element={<ConstructionImmeubleKinshasa />} />
-          <Route path="/construction-route-retama" element={<RouteKetama />} />
+          <Route path="//ecole-verte-zenata-primaire-college-lycee" element={<RouteKetama />} />
           <Route path="/construction-immeuble-appartements-r3-kinshasa" element={<Vllakishasar3 />} />
             
             
@@ -126,6 +126,7 @@ function App() {
 
             <Route path="/Deatils" element={<DetailRealisation />} />
 
+            <Route path="/*" element={<NotFound />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

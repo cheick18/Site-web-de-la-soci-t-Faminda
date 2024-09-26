@@ -2,67 +2,61 @@ import React, { useRef } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css'; // Importer les styles par défaut
 
-import immeuble_appartement_R2_Kinshasa_1 from '../images/projets/immeuble_appartement_R2_Kinshasa_1.png'
-import immeuble_appartement_R2_Kinshasa_2 from '../images/projets/immeuble_appartement_R2_Kinshasa_2.png'
-import immeuble_appartement_R2_Kinshasa_3 from '../images/projets/immeuble_appartement_R2_Kinshasa_3.jpg'
-import immeuble_appartement_R2_Kinshasa_4 from '../images/projets/immeuble_appartement_R2_Kinshasa_4.jpg'
-import immeuble_appartement_R2_Kinshasa_5 from '../images/projets/immeuble_appartement_R2_Kinshasa_5.jpg'
+
+import Ecole_verte_zenata_3 from '../images/projets/Ecole_verte_zenata_3.jpeg'
+import Ecole_verte_zenata_1 from '../images/projets/Ecole_verte_zenata_1.jpeg'
+import Ecole_verte_zenata_2 from '../images/projets/Ecole_verte_zenata_2.jpeg'
 import waga from '../images/projets/waga.png'
 
-import travaux1 from '../images/projets/travaux1.png'
-import route_ketama_2 from '../images/projets/route_ketama_2.png'
-import route_ketama_3 from '../images/projets/route_ketama_3.jpg'
-import route_ketama_4 from '../images/projets/route_ketama_4.jpg'
-import route_ketama_5 from '../images/projets/route_ketama_5.jpg'
-import route_ketama_6 from '../images/projets/route_ketama_6.jpg'
-import route_ketama_7 from '../images/projets/route_ketama_7.jpg'
-import route_ketama_8 from '../images/projets/route_ketama_8.jpg'
-import route_ketama_9 from '../images/projets/route_ketama_9.jpg'
+
+import { Box, Divider, Typography } from '@mui/material';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import ImageIcon from '@mui/icons-material/Image';
+import WorkIcon from '@mui/icons-material/Work';
+import BeachAccessIcon from '@mui/icons-material/BeachAccess';
+import Footer from '../Components/Footer';
+import { useEffect } from 'react';
 
 export default function DetailRealisation() {
     const galleryRef = useRef(null); // Référence au composant ImageGallery
+    useEffect(() => {
+      // Réinitialiser la position de défilement à 0
+      window.scrollTo(0, 0);
+  
+    
+      return () => {
+       
+      };
+    }, []);
 
     const images = [
         {
-            original: travaux1,
-            thumbnail: travaux1,
+            original: Ecole_verte_zenata_3,
+            thumbnail: Ecole_verte_zenata_3,
         },
         {
-            original: route_ketama_2,
-            thumbnail: route_ketama_2,
+          original: Ecole_verte_zenata_1,
+          thumbnail: Ecole_verte_zenata_1,
         },
         {
-            original: route_ketama_3,
-            thumbnail: route_ketama_3,
+          original: Ecole_verte_zenata_2,
+          thumbnail: Ecole_verte_zenata_2,
         },
-        {
-            original: route_ketama_4,
-            thumbnail: route_ketama_4,
-        },
-        {
-            original: route_ketama_5,
-            thumbnail: route_ketama_5,
-        },
-        {
-            original: route_ketama_6,
-            thumbnail: route_ketama_6,
-        },
-        {
-            original: route_ketama_7,
-            thumbnail: route_ketama_7,
-        },
-        {
-            original: route_ketama_8,
-            thumbnail: route_ketama_8,
-        },
+    
+      
   
   
     ];
     //construction-centreculturel-Berkane.html
 
     return (
-        <div style={{ maxWidth: '800px', margin: '0 5%' }}>
-            <h1>Page de détail</h1>
+        <>
+        <Typography variant='h4'  color='#424242' sx={{fontFamily: 'Montserrat, sans-serif', paddingTop:'48px', margin: '0 5%'}}>Ecole Verte Zenata - Primaire - Collége - Lycée</Typography>
+        <div style={{ maxWidth: '800px', margin: '0 5%' ,paddingTop:'48px'}}>
             <div style={{ marginBottom: '20px' }}>
                 <ImageGallery
                     ref={galleryRef} // Référence au composant
@@ -102,5 +96,50 @@ export default function DetailRealisation() {
                 ))}
             </div>
         </div>
+         <Box sx={{paddingLeft:'4%', paddingTop:'48px'}}>
+         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+       <ListItem>
+         <ListItemAvatar>
+         <Avatar sx={{ bgcolor:'white'}}  > 
+           📏
+           </Avatar>
+         </ListItemAvatar>
+         <ListItemText primary=" Surface réalisée " secondary="3.2 Ha" />
+       </ListItem>
+       <Divider variant="inset" component="li" />
+       <ListItem>
+        
+         <ListItemAvatar>
+         <Avatar sx={{ bgcolor:'white'}}  > 
+           🏙️
+           </Avatar>
+         </ListItemAvatar>
+         <ListItemText primary=" Ville " secondary="Cablanca" />
+       </ListItem>
+       <Divider variant="inset" component="li" />
+       <ListItem>
+         <ListItemAvatar>
+         <Avatar sx={{ bgcolor:'white'}}  > 
+           📚
+             
+           </Avatar>
+         </ListItemAvatar>
+         <ListItemText primary="Mission" secondary="Étude technique" />
+       </ListItem>
+       <Divider variant="inset" component="li" />
+       <ListItem>
+         <ListItemAvatar>
+           <Avatar sx={{ bgcolor:'white'}}  > 
+           📅
+           </Avatar >
+         </ListItemAvatar>
+         <ListItemText primary="Date" secondary="2019-2021" />
+       </ListItem>
+       <Divider variant="inset" component="li" />
+     
+     </List>
+         </Box>
+         <Footer />
+         </>
     );
 }

@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Grid, Typography, useMediaQuery } from '@mui/material'
+import { Avatar, Box, Button, Grid, ListItem, ListItemAvatar, ListItemText, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 import slide2 from '../Components/slider2.jpg'
 import MailIcon from '@mui/icons-material/Mail';
@@ -41,111 +41,244 @@ export default function Services() {
 
   return (
     <>
+  {isSm&&(  <>
 
 
-      <div style={{ height: '470px', position: 'relative' }}  >
-        <img src={slide2} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+    <div style={{ height: '470px', position: 'relative' }}  >
+      <img src={slide2} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
 
-        <Box style={{ position: 'absolute', top: 0, display: 'block', height: '470px', width: '100%' }}>
-          <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
-            <Typography variant="h2" style={{fontSize: isSm? '2.488 rem':'2.30rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{title} </Typography>
+      <Box style={{ position: 'absolute', top: 0, display: 'block', height: '470px', width: '100%' }}>
+        <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
+        {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{title} </Typography>
 
-          </div>
+)}
+    {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{title} </Typography>
 
+)}
+
+        </div>
+
+
+      </Box>
+
+    </div>
+    {/*
+
+  <div  style={{height:'500px', position:'relative',fontFamily: 'Montserrat, sans-serif'}}>
+  <div style={{ width:'600px',position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)'}}>
+
+   <Typography variant='body2'  align='center' color='#9e9e9e'  sx={{fontFamily: 'Montserrat, sans-serif'}} >Ut quos unde est voluptatem tempore 33 sunt impedit et tempora
+consequatur qui enim magni. magnam temporibus ut distinctio nihil id assumenda
+quos non recusandae quae. Sit deleniti possimus ut obcae</Typography>
+   </div>
+  </div>
+  
+
+ */}
+    <Grid container sx={{ padding: '0 4%', paddingTop: '128px', }}>
+      <Grid item md={7}>
+        <Box>
+          <img src={image} style={{ width: '100%', height: '508px', borderRadius: '8px' }} />
 
         </Box>
 
-      </div>
-      {/*
+      </Grid>
+      <Grid item md={12}></Grid>
+      <Grid item md={5} >
+        <Grid container>
+          { body?.one&&(
+            <>
 
-    <div  style={{height:'500px', position:'relative',fontFamily: 'Montserrat, sans-serif'}}>
-    <div style={{ width:'600px',position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)'}}>
-  
-     <Typography variant='body2'  align='center' color='#9e9e9e'  sx={{fontFamily: 'Montserrat, sans-serif'}} >Ut quos unde est voluptatem tempore 33 sunt impedit et tempora
-consequatur qui enim magni. magnam temporibus ut distinctio nihil id assumenda
-quos non recusandae quae. Sit deleniti possimus ut obcae</Typography>
-     </div>
-    </div>
-    
-
-   */}
-      <Grid container sx={{ padding: '0 4%', paddingTop: '128px', }}>
-        <Grid item md={7}>
-          <Box>
-            <img src={image} style={{ width: '100%', height: '508px', borderRadius: '8px' }} />
-
-          </Box>
-
-        </Grid>
-        <Grid item md={12}></Grid>
-        <Grid item md={5} >
-          <Grid container>
-            { body?.one&&(
-              <>
-
-            <Grid item md={1} sx={{ paddingBlockStart: '48px' }} >
-              <Avatar sx={{ backgroundColor: '#359AF2', width: 20, height: 20 }}>
-                <CheckIcon sx={{ width: 15, height: 15}} />
-
-
-              </Avatar>
-
-            </Grid>
-            <Grid item md={11}  >
-
-              <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} > {body?.one}</Typography>
-
-
-            </Grid>
-            <Grid item md={12}></Grid>
-            </>
-
-            )}
-               {body?.two&&
-                (<>
-                  <Grid item md={1} sx={{ paddingBlockStart: '48px' }} >
+          <Grid item md={1} sx={{ paddingBlockStart: '48px' }} >
             <Avatar sx={{ backgroundColor: '#359AF2', width: 20, height: 20 }}>
-            <CheckIcon sx={{ width: 15, height: 15}} />
-
-              </Avatar>
-
-            </Grid>
-            <Grid item md={11}  >
-
-              <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} > {body?.two}</Typography>
+              <CheckIcon sx={{ width: 15, height: 15}} />
 
 
-            </Grid>
+            </Avatar>
 
-                </>)
-               }
-               {/*
-            <Grid item md={1} sx={{ paddingBlockStart: '48px' }} >
-            <Avatar sx={{ backgroundColor: '#359AF2', width: 20, height: 20 }}>
-            <CheckIcon sx={{ width: 15, height: 15}} />
+          </Grid>
+          <Grid item md={11}  >
 
-              </Avatar>
-
-            </Grid>
-            <Grid item md={11}  >
-
-              <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} > Conception et dimensionnement pour des bâtiments résidentiels, industriels<br></br> commerciaux, éducatifs, médicaux et autres.</Typography>
-
-
-            </Grid>
-            */}
-
-
+            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} > {body?.one}</Typography>
 
 
           </Grid>
+          <Grid item md={12}></Grid>
+          </>
+
+          )}
+             {body?.two&&
+              (<>
+                <Grid item md={1} sx={{ paddingBlockStart: '48px' }} >
+          <Avatar sx={{ backgroundColor: '#359AF2', width: 20, height: 20 }}>
+          <CheckIcon sx={{ width: 15, height: 15}} />
+
+            </Avatar>
+
+          </Grid>
+          <Grid item md={11}  >
+
+            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} > {body?.two}</Typography>
+
+
+          </Grid>
+
+              </>)
+             }
+             {/*
+          <Grid item md={1} sx={{ paddingBlockStart: '48px' }} >
+          <Avatar sx={{ backgroundColor: '#359AF2', width: 20, height: 20 }}>
+          <CheckIcon sx={{ width: 15, height: 15}} />
+
+            </Avatar>
+
+          </Grid>
+          <Grid item md={11}  >
+
+            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} > Conception et dimensionnement pour des bâtiments résidentiels, industriels<br></br> commerciaux, éducatifs, médicaux et autres.</Typography>
+
+
+          </Grid>
+          */}
+
+
 
 
         </Grid>
 
 
       </Grid>
-      <Footer />
+
+
+    </Grid>
+    <Footer />
+
+
+  </>)}
+  
+
+{isXs&&(<>
+
+
+<div style={{ height: '470px', position: 'relative' }}  >
+  <img src={slide2} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+
+  <Box style={{ position: 'absolute', top: 0, display: 'block', height: '470px', width: '100%' }}>
+    <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
+
+    {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{title} </Typography>
+
+         )}
+             {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{title} </Typography>
+
+         )}
+     
+    </div>
+
+
+  </Box>
+
+</div>
+{/*
+
+<div  style={{height:'500px', position:'relative',fontFamily: 'Montserrat, sans-serif'}}>
+<div style={{ width:'600px',position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)'}}>
+
+<Typography variant='body2'  align='center' color='#9e9e9e'  sx={{fontFamily: 'Montserrat, sans-serif'}} >Ut quos unde est voluptatem tempore 33 sunt impedit et tempora
+consequatur qui enim magni. magnam temporibus ut distinctio nihil id assumenda
+quos non recusandae quae. Sit deleniti possimus ut obcae</Typography>
+</div>
+</div>
+
+
+*/}
+<Grid container sx={{ padding: '0 4%', paddingTop: '128px', }}>
+  <Grid item md={7}>
+    <Box>
+      <img src={image} style={{ width: '100%', height: '300px', borderRadius: '8px' }} />
+
+    </Box>
+
+  </Grid>
+  <Grid item md={12}></Grid>
+  <Grid item md={5} >
+    <Grid container>
+      { body?.one&&(
+        <>
+
+     
+      <Grid item md={11}  >
+        {/**  <Avatar sx={{ backgroundColor: '#359AF2', width: 20, height: 20 }}>
+          <CheckIcon sx={{ width: 15, height: 15}} />
+
+
+        </Avatar> */}
+           <Box sx={{ display: 'flex', alignItems: 'center', paddingBlockStart: '48px' }}>
+           <Avatar sx={{ backgroundColor: '#359AF2', width: 20, height: 20 }}>
+           <CheckIcon sx={{ width: 15, height: 15}} />
+           </Avatar>
+        
+      <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif' ,paddingLeft:'10px'}}>
+        {body?.one}
+      </Typography>
+    </Box>
+ 
+
+
+      </Grid>
+      <Grid item md={12}></Grid>
+      </>
+
+      )}
+         {body?.two&&
+          (<>
+       
+      <Grid item md={11}  >
+
+        <Box sx={{ display: 'flex', alignItems: 'center', paddingBlockStart: '38px' }}>
+           <Avatar sx={{ backgroundColor: '#359AF2', width: 20, height: 20 }}>
+           <CheckIcon sx={{ width: 15, height: 15}} />
+           </Avatar>
+        
+   
+           <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px',paddingLeft:'10px',paddingBottom:'40px' }} > {body?.two}</Typography>
+
+    </Box>
+    
+      </Grid>
+
+          </>)
+         }
+         {/*
+      <Grid item md={1} sx={{ paddingBlockStart: '48px' }} >
+      <Avatar sx={{ backgroundColor: '#359AF2', width: 20, height: 20 }}>
+      <CheckIcon sx={{ width: 15, height: 15}} />
+
+        </Avatar>
+
+      </Grid>
+      <Grid item md={11}  >
+
+        <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} > Conception et dimensionnement pour des bâtiments résidentiels, industriels<br></br> commerciaux, éducatifs, médicaux et autres.</Typography>
+
+
+      </Grid>
+      */}
+
+
+
+
+    </Grid>
+
+
+  </Grid>
+
+
+</Grid>
+<Footer />
+
+
+</>)}
 
 
     </>

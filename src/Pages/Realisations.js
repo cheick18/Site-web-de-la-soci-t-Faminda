@@ -8,6 +8,7 @@ import _dbproject from '../Components/_dbproject'
 import centre_culturel_berkane_3 from '../images/projets/centre_culturel_berkane_3.jpg'
 import refection_remise_n_etat_equipements_1 from '../images/projets/refection_remise_n_etat_equipements_1.jpg'
 import extention_academique_universite_alkhawayne_1 from '../images/projets/extention_academique_universite_alkhawayne_1.jpg'
+import Ecole_verte_zenata_3 from '../images/projets/Ecole_verte_zenata_3.jpeg'
 
 import student_center_universite_alkhawayne_Ifrane_1 from '../images/projets/student_center_universite_alkhawayne_Ifrane_1.jpg'
 
@@ -108,11 +109,28 @@ export default function Realisations() {
     },
     {
       "id": 8,
-      "name": "Construction de la Route Ketama du PK0+000 au PK3+777  dans la commune Ouad El Mkhazine",
+      "name": "Ecole Verte Zenata - Primaire - Collége - Lycée",
     
       "description": "Une tablette légère et facile à utiliser.",
-      "image": route_ketama_3,
-       "path":"/construction-route-retama"
+      "image": Ecole_verte_zenata_3,
+       "path":"/ecole-verte-zenata-primaire-college-lycee"
+    },
+  
+    {
+      "id": 10,
+      "name": "Construction d’un immeuble appartement R+3 à Kinshasa",
+    
+      "description": "Une tablette légère et facile à utiliser.",
+      "image": immeuble_appartement_R3_Kinshasa_1,
+       "path":"/construction-immeuble-appartements-r3-kinshasa"
+    },
+    {
+      "id": 9,
+      "name": "Construction d’une villa unifamiliale à Kinshasa",
+    
+      "description": "Une tablette légère et facile à utiliser.",
+      "image": villa_unifamiliale_Kinshasa_1,
+       "path":"/construction-villa-unifamiliale-kinshasa"
     },
     {
       "id": 9,
@@ -122,6 +140,16 @@ export default function Realisations() {
       "image": villa_unifamiliale_Kinshasa_1,
        "path":"/construction-villa-unifamiliale-kinshasa"
     },
+    {
+      "id": 9,
+      "name": "Construction d’une villa unifamiliale à Kinshasas",
+    
+      "description": "Une tablette légère et facile à utiliser.",
+      "image": villa_unifamiliale_Kinshasa_1,
+       "path":"/construction-villa-unifamiliale-kinshasa"
+    },
+ 
+ 
   ]
   useEffect(() => {
     // Réinitialiser la position de défilement à 0
@@ -172,8 +200,9 @@ export default function Realisations() {
         isXs&&(
         
         productData.map((p)=>{
+          if(p.name!=construction){
           return(
-            <Grid item  xs={12}  key={p.id}  textAlign='center' style={{opacity:p.name!=construction?1:0}}>
+            <Grid item  xs={12}  key={p.id}  textAlign='center' >
   {p.image?<div style={{backgroundColor:'black',height:'200px',borderRadius:'16px'}}  onMouseEnter={onmouseenter} onMouseLeave={onmouseleave}>
         <Link to={p.path}>
       <img src={p.image} style={{width:'100%', height:'200px',objectFit:'cover',borderRadius:'16px'}}  />
@@ -187,6 +216,7 @@ export default function Realisations() {
 </Grid>
 
           );
+        }
         }
         )
         )
