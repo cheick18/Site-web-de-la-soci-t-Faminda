@@ -2,11 +2,7 @@
   "short_name": "Faminda",
   "name": "Faminda Concept",
   "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
+   
     {
       "src": "Projet_Gloire.jpg",
       "sizes": "192x192",
