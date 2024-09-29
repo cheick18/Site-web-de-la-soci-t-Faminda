@@ -6,6 +6,8 @@ import About from './Pages/About';
 import NotFound from './Pages/NotFound';
 import Navbar from './Components/Navbar';
 import  logo from './Components/logo.png';
+import HotelWave from '../src/Pages/HotelWave'
+import UniversiteOdienne from '../src/Pages/UniversiteOdienne'
 import  ConstructionCentreculturelBerkane from '../src/Pages/ConstructionCentreculturelBerkane'
 import RefectionEquipement from '../src/Pages/RefectionEquipement'
 import ContructionStudentCenter from '../src/Pages/ContructionStudentCenter'
@@ -14,7 +16,16 @@ import ConstructionImmeubleKinshasa from '../src/Pages/ConstructionImmeubleKinsh
 import VillaKishasa from '../src/Pages/VillaKishasa'
 import RouteKetama from '../src/Pages/RouteKetama'
 import Vllakishasar3 from '../src/Pages/Vllakishasar3'
-
+import CalculStrucure from '../src/Pages/CalculStrucure'
+import EtudesArchitecurales from '../src/Pages/EtudesArchitecurales'
+import EtudesGenerales from '../src/Pages/EtudesGenerales'
+import HydrauliqueUrbaine from '../src/Pages/HydrauliqueUrbaine'
+import RoutesAutoroutes from '../src/Pages/RoutesAutoroutes'
+import OuvragesArt from '../src/Pages/OuvragesArt'
+import Barrages from '../src/Pages/Barrages'
+import TravauxMaritimes from '../src/Pages/TravauxMaritimes'
+import TravaauxDefense from '../src/Pages/TravaauxDefense'
+import ReseauFluide from '../src/Pages/ReseauFluide'
 
 
 
@@ -83,16 +94,16 @@ function App() {
             <Route path="/realisations" element={<Realisations />} />
           
           {/** <Route path="/service" element={<Service />} /> */} 
-          <Route path="/calcul-structures-batiments" element={<Service />} />
-          <Route path="/etudes-architecturales-suivi-projets" element={<Service />} />
-          <Route path="/etudes-generales" element={<Service />} />
-          <Route path="/barrages" element={<Service />} />
-          <Route path="/hydraulique-urbaine" element={<Service />} />
-          <Route path="/routes-autoroutes-transports" element={<Service />} />
-          <Route path="/ouvrages-d-art" element={<Service />} />
-          <Route path="/travaux-maritimes-fluviaux" element={<Service />} />
-          <Route path="/travaux-genie-defense-caractere-specific" element={<Service />} />
-          <Route path="/reseaux-fluides-batiments" element={<Service />} />
+          <Route path="/calcul-structures-batiments" element={<CalculStrucure />} />
+          <Route path="/etudes-architecturales-suivi-projets" element={<EtudesArchitecurales />} />
+          <Route path="/etudes-generales" element={<EtudesGenerales />} />
+          <Route path="/barrages" element={<Barrages />} />
+          <Route path="/hydraulique-urbaine" element={<HydrauliqueUrbaine />} />
+          <Route path="/routes-autoroutes-transports" element={<RoutesAutoroutes />} />
+          <Route path="/ouvrages-d-art" element={<OuvragesArt />} />
+          <Route path="/travaux-maritimes-fluviaux" element={<TravauxMaritimes />} />
+          <Route path="/travaux-genie-defense-caractere-specific" element={<TravaauxDefense />} />
+          <Route path="/reseaux-fluides-batiments" element={<ReseauFluide />} />
           <Route path="/voirie-reseaux-assainissement-eau-potable" element={<Service />} />
           <Route path="/etudes-impact-environnement" element={<Service />} />
           <Route path="/securite-contre-incendie-constructions" element={<Service />} />
@@ -108,13 +119,15 @@ function App() {
            */}
           <Route path="/construction-centreculturel-berkane" element={<ConstructionCentreculturelBerkane />} />
           <Route path="/refection-remise-en-etat-equipements-lotissement" element={<RefectionEquipement />} />
+          <Route path="/hotel-wave" element={<HotelWave />} />
+          <Route path="/universite-odienne" element={<UniversiteOdienne />} />
            
           <Route path="/construction-extension-academique-universite-al-khawayne-ifrane" element={<ConstructionExtensionAcademique />} />
           <Route path="/construction-immeuble-appartement-r2-kinshasa" element={<RefectionEquipement />} />
           <Route path="/construction-villa-unifamiliale-kinshasa" element={<VillaKishasa />} />
           <Route path="/construction-student-center-universite-al-khawayne-ifrane" element={<ContructionStudentCenter />} />
           <Route path="/construction-immeuble-appartements-r2-kinshasa" element={<ConstructionImmeubleKinshasa />} />
-          <Route path="//ecole-verte-zenata-primaire-college-lycee" element={<RouteKetama />} />
+          <Route path="/ecole-verte-zenata-primaire-college-lycee" element={<RouteKetama />} />
           <Route path="/construction-immeuble-appartements-r3-kinshasa" element={<Vllakishasar3 />} />
             
             

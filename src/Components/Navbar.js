@@ -343,7 +343,7 @@ const services=[
           }
         </List>
       </Collapse>
-      <Link to='/realisations'  style={{textDecoration:'none', color:'#212121'}}>
+      <Link to='/realisations'  style={{textDecoration:'none', color:'#212121'}} onClick={()=>setOpenDrawer(false)}>
       <ListItemButton>
         {/*
         <ListItemIcon>
@@ -353,7 +353,7 @@ const services=[
         <ListItemText primary="Réalisations" />
       </ListItemButton>
       </Link>
-      <Link to='/about' style={{textDecoration:'none', color:'#212121'}} >
+      <Link to='/about' style={{textDecoration:'none', color:'#212121'}} onClick={()=>setOpenDrawer(false)} >
       <ListItemButton>
       
         {/*

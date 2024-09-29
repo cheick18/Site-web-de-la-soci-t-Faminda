@@ -55,7 +55,7 @@ const responsive = {
         <div style={{display:'block',height:'24px'}}></div>
         <Typography variant='body' align='center' style={{color:'white',fontFamily: 'Montserrat, sans-serif'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines</Typography>
 <div style={{display:'block',height:'16px'}}></div>
-<Link to='/contact'>
+<Link to='/contact' style={{textDecoration:'none'}}>
 <Button size="large" variant='contained' color='primary' startIcon={<MailIcon />}>Contactez-nous</Button>
 </Link>
      </Box>
@@ -77,7 +77,7 @@ const responsive = {
         <div style={{display:'block',height:'24px'}}></div>
         <Typography variant='body3' align='center' style={{color:'white',fontFamily:'Montserrat, sans-serif'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines</Typography>
 <div style={{display:'block',height:'16px'}}></div>
-<Link to='/contact'>
+<Link to='/contact' style={{textDecoration:'none'}}>
 <Button size="large" variant='contained' color='primary' startIcon={<MailIcon />}>Contactez nous</Button>
 </Link>
      </Box>

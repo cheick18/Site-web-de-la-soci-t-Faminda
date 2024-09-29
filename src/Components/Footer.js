@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function Footer() {
-  const phoneNumber = '+212771676213'; // Remplace par le numéro de téléphone
+  const phoneNumber = '+212655799909'; // Remplace par le numéro de téléphone
 const whatsappLink = `https://wa.me/${phoneNumber}`;
 
     const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
@@ -49,7 +49,9 @@ const whatsappLink = `https://wa.me/${phoneNumber}`;
         <Fab size="small" color="secondary" aria-label="add"><FacebookOutlinedIcon sx={{color:'white'}} /></Fab>
         <Fab size="small" color="secondary" aria-label="add"><InstagramIcon sx={{color:'white'}} /></Fab>
         <Link to={whatsappLink}> <Fab size="small" color="secondary" aria-label="add"> <WhatsAppIcon sx={{ color: 'white' }} /> </Fab></Link> 
-        <Fab size="small" color="secondary" aria-label="add"><LinkedInIcon sx={{color:'white'}} /></Fab>
+        <Link to='https://www.linkedin.com/company/famindaconcept/'>  <Fab size="small" color="secondary" aria-label="add"><LinkedInIcon  sx={{color:'white'}} /></Fab></Link>
+      
+      
         <Fab size="small" color="secondary" aria-label="add"><YouTubeIcon sx={{color:'white'}}/></Fab>
         </Stack>
         
@@ -66,9 +68,9 @@ const whatsappLink = `https://wa.me/${phoneNumber}`;
             <div style={{display:'block', height:'5px', width:'28px',background:'#bdbdbd'}}> </div>
             <Typography variant='h6'style={{color:'white'}}><Link style={{textDecoration:'none',color:'white'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave} to='/realisations'>Réalisations</Link></Typography>
             <div style={{display:'block', height:'5px', width:'28px',background:'#bdbdbd'}}> </div>
-            <Typography variant='h6'style={{color:'white'}}> <Link style={{textDecoration:'none',color:'white'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave} to='/about'>A propos</Link></Typography>
+            <Typography variant='h6'style={{color:'white'}}> <Link style={{textDecoration:'none',color:'white'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave} to='/about'>À propos</Link></Typography>
             <div style={{display:'block', height:'5px', width:'28px',background:'#bdbdbd'}}> </div>
-            <Typography variant='h6' style={{color:'white'}}><Link style={{textDecoration:'none',color:'white'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave} to='/contact'> Contactez nous</Link></Typography>
+            <Typography variant='h6' style={{color:'white'}}><Link style={{textDecoration:'none',color:'white'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave} to='/contact'> Contactez-nous</Link></Typography>
             </Stack>
 
             </Grid>
@@ -90,10 +92,12 @@ isXs &&(
    <img src={logoGloire} alt="Logo" style={{ height: 70 , objectFit:'cover'}}  />
         <Typography variant='body2' textAlign='center' style={{color:'#bdbdbd',paddingBlockEnd:'16px',paddingLeft:'16px'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines </Typography>
         <Stack direction='row'spacing={1.5} style={{paddingBlockEnd:'64px'}} justifyContent='center'>
-        <Fab size="small" color="secondary" aria-label="add"><FacebookOutlinedIcon sx={{color:'white'}} /></Fab>
+     <Link to='https://www.facebook.com/share/GYZ47uADRJp9TLH7/?mibextid=qi2Omg'> <Fab size="small" color="secondary" aria-label="add"><FacebookOutlinedIcon sx={{color:'white'}} /></Fab></Link>
         <Fab size="small" color="secondary" aria-label="add"><InstagramIcon  sx={{color:'white'}}  /></Fab>
       <Link to={whatsappLink}> <Fab size="small" color="secondary" aria-label="add"> <WhatsAppIcon sx={{ color: 'white' }} /> </Fab></Link> 
-        <Fab size="small" color="secondary" aria-label="add"><LinkedInIcon  sx={{color:'white'}} /></Fab>
+     <Link to='https://www.linkedin.com/company/famindaconcept/'>  <Fab size="small" color="secondary" aria-label="add"><LinkedInIcon  sx={{color:'white'}} /></Fab></Link>
+      
+      
         <Fab size="small" color="secondary" aria-label="add"><YouTubeIcon  sx={{color:'white'}} /></Fab>
         </Stack>
         
@@ -136,7 +140,7 @@ isXs &&(
         
         >
        {/**        <Palette sx={{ mr: 0.5 }} fontSize="inherit" />  */}  
-          A propos
+       À propos
         </Link>
         <Link
           sx={{ display: 'flex', alignItems: 'center'}}
@@ -144,7 +148,7 @@ isXs &&(
         to='/contact'
         >
        {/**        <Palette sx={{ mr: 0.5 }} fontSize="inherit" />  */}  
-          Contactez nous
+          Contactez-nous
         </Link>
         </Stack>
         <Stack direction='row' spacing={1}  style={{paddingBlockStart:'8px'}}>

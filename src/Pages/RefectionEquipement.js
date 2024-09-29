@@ -17,7 +17,17 @@ import ImageIcon from '@mui/icons-material/Image';
 import WorkIcon from '@mui/icons-material/Work';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import Footer from '../Components/Footer';
+import { useEffect } from 'react';
 export default function DetailRealisation() {
+  useEffect(() => {
+    // Réinitialiser la position de défilement à 0
+    window.scrollTo(0, 0);
+
+  
+    return () => {
+     
+    };
+  }, []);
     const galleryRef = useRef(null); // Référence au composant ImageGallery
 
     const images = [

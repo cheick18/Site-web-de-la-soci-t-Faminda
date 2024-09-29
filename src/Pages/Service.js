@@ -49,12 +49,7 @@ export default function Services() {
 
       <Box style={{ position: 'absolute', top: 0, display: 'block', height: '470px', width: '100%' }}>
         <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
-        {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{title} </Typography>
-
-)}
-    {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{title} </Typography>
-
-)}
+          <Typography variant="h2" style={{fontSize: isSm? '2.488 rem':'2.30rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{title} </Typography>
 
         </div>
 

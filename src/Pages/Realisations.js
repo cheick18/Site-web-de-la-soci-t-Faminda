@@ -16,6 +16,10 @@ import immeuble_appartement_R2_Kinshasa_1 from '../images/projets/immeuble_appar
 import villa_unifamiliale_Kinshasa_1 from '../images/projets/villa_unifamiliale_Kinshasa_1.png'
 import route_ketama_3 from '../images/projets/route_ketama_3.jpg'
 import immeuble_appartement_R3_Kinshasa_1 from '../images/projets/immeuble_appartement_R3_Kinshasa_1.jpg'
+import Universite_odienne_1  from '../images/projets/Universite_odienne_1.jpeg';
+import Hotel_wave_1  from '../images/projets/Hotel_wave_1.jpeg';
+
+
 import { useEffect } from 'react';
 export default function Realisations() {
   const construction ='Construction d’une villa unifamiliale à Kinshasas'
@@ -118,19 +122,19 @@ export default function Realisations() {
   
     {
       "id": 10,
-      "name": "Construction d’un immeuble appartement R+3 à Kinshasa",
+      "name": "Hotel Wave",
     
       "description": "Une tablette légère et facile à utiliser.",
-      "image": immeuble_appartement_R3_Kinshasa_1,
-       "path":"/construction-immeuble-appartements-r3-kinshasa"
+      "image": Hotel_wave_1,
+       "path":"/hotel-wave"
     },
     {
       "id": 9,
-      "name": "Construction d’une villa unifamiliale à Kinshasa",
+      "name": "Université Odienné",
     
       "description": "Une tablette légère et facile à utiliser.",
-      "image": villa_unifamiliale_Kinshasa_1,
-       "path":"/construction-villa-unifamiliale-kinshasa"
+      "image": Universite_odienne_1,
+       "path":"/universite-odienne"
     },
     {
       "id": 9,

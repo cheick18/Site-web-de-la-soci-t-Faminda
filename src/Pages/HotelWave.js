@@ -2,17 +2,11 @@ import React, { useRef } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css'; // Importer les styles par défaut
 
-import villa_unifamiliale_Kinshasa_1 from '../images/projets/villa_unifamiliale_Kinshasa_1.png'
-import villa_kinshasa_2 from '../images/projets/villa_kinshasa_2.png'
-import villa_unifamiliale_Kinshasa_2 from '../images/projets/villa_unifamiliale_Kinshasa_2.png'
-import immeuble_appartement_R3_Kinshasa_1 from '../images/projets/immeuble_appartement_R3_Kinshasa_1.jpg'
 
+import Hotel_wave_1 from '../images/projets/Hotel_wave_1.jpeg'
+import Hotel_wave_2 from '../images/projets/Hotel_wave_2.jpeg'
+import hotel_wave_3 from '../images/projets/hotel_wave_3.jpeg'
 
-import immeuble_appartement_R3_Kinshasa_2 from '../images/projets/immeuble_appartement_R3_Kinshasa_2.jpg'
-import immeuble_appartement_R3_Kinshasa_3 from '../images/projets/immeuble_appartement_R3_Kinshasa_3.jpg'
-import immeuble_appartement_R3_Kinshasa_4 from '../images/projets/immeuble_appartement_R3_Kinshasa_4.jpg'
-import immeuble_appartement_R3_Kinshasa_5 from '../images/projets/immeuble_appartement_R3_Kinshasa_5.jpg'
-import immeuble_appartement_R3_Kinshasa_6 from '../images/projets/immeuble_appartement_R3_Kinshasa_6.jpg'
 import { Box, Divider, Typography } from '@mui/material';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -24,51 +18,46 @@ import WorkIcon from '@mui/icons-material/Work';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import Footer from '../Components/Footer';
 import { useEffect } from 'react';
-
-
-//immeuble_appartement_R3_Kinshasa_2
 export default function DetailRealisation() {
-  useEffect(() => {
-    // Réinitialiser la position de défilement à 0
-    window.scrollTo(0, 0);
-
-  
-    return () => {
-     
-    };
-  }, []);
+    useEffect(() => {
+        // Réinitialiser la position de défilement à 0
+        window.scrollTo(0, 0);
+    
+      
+        return () => {
+         
+        };
+      }, []);
     const galleryRef = useRef(null); // Référence au composant ImageGallery
 
     const images = [
+       
         {
-            original: villa_unifamiliale_Kinshasa_1,
-            thumbnail: villa_unifamiliale_Kinshasa_1,
+            original: Hotel_wave_1,
+            thumbnail: Hotel_wave_1,
         },
         {
-            original: villa_kinshasa_2,
-            thumbnail: villa_kinshasa_2,
+            original: Hotel_wave_2,
+            thumbnail: Hotel_wave_2,
         },
         {
-            original: villa_unifamiliale_Kinshasa_2,
-            thumbnail: villa_unifamiliale_Kinshasa_2,
+            original:hotel_wave_3,
+            thumbnail: hotel_wave_3,
         },
-    
-    
-   
-   
-   
-   
   
-  
+
+    
+      
     ];
-    //construction-centreculturel-Berkane.html
+  
 
     return (
         <>
-             <Typography variant='h4'  color='#424242' sx={{fontFamily: 'Montserrat, sans-serif', paddingTop:'48px', margin: '0 5%'}}>Construction d’une villa unifamiliale<br></br> à Kinshasa</Typography>
-       
-        <div style={{ maxWidth: '800px', margin: '0 5%', paddingTop:'48px' }}>
-         
+        
+        <Typography variant='h4'  color='#424242' sx={{fontFamily: 'Montserrat, sans-serif', paddingTop:'48px', margin: '0 5%'}}>Hotel Wave</Typography>
+        <div style={{ maxWidth: '800px', margin: '0 5%' ,paddingTop:'48px'}}>
+    
+        
             <div style={{ marginBottom: '20px' }}>
                 <ImageGallery
                     ref={galleryRef} // Référence au composant
@@ -84,9 +73,9 @@ export default function DetailRealisation() {
                     renderLeftNav={() => null} 
                     renderRightNav={() => null} 
                     thumbnailClass="custom-thumbnail" 
-                   
                 />
             </div>
+          
             <div className="thumbnails">
                 {images.map((image, index) => (
                     <img
@@ -106,6 +95,7 @@ export default function DetailRealisation() {
                     />
                 ))}
             </div>
+          
         </div>
         <Box sx={{paddingLeft:'4%', paddingTop:'48px'}}>
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
@@ -115,7 +105,7 @@ export default function DetailRealisation() {
           📏
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary=" Surface réalisée " secondary="3 000 m²" />
+        <ListItemText primary=" Surface réalisée " secondary="4150 m²" />
       </ListItem>
       <Divider variant="inset" component="li" />
       <ListItem>
@@ -125,7 +115,7 @@ export default function DetailRealisation() {
           🏙️
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary=" Ville " secondary="Kinshasa" />
+        <ListItemText primary=" Ville " secondary="Tanger" />
       </ListItem>
       <Divider variant="inset" component="li" />
       <ListItem>
@@ -135,7 +125,7 @@ export default function DetailRealisation() {
             
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Mission" secondary="Conception architecturale, Etudes techniques et OPC" />
+        <ListItemText primary="Mission" secondary="Étude technique" />
       </ListItem>
       <Divider variant="inset" component="li" />
       <ListItem>
@@ -144,7 +134,7 @@ export default function DetailRealisation() {
           📅
           </Avatar >
         </ListItemAvatar>
-        <ListItemText primary="Date" secondary="2019-2022" />
+        <ListItemText primary="Date" secondary="2022-2024" />
       </ListItem>
       <Divider variant="inset" component="li" />
     
