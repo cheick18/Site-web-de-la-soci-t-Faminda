@@ -73,7 +73,7 @@ const responsive = {
 
          <Box >
    <div style={{display:'block',height:'88px'}}></div> 
-        <Typography variant="h1" style={{fontSize:'2.986rem',color:'white',fontFamily:'Montserrat, sans-serif', fontWeight:'bold'}} >Faminda Concept, Bureau d'Étude en Génie Civil et Architecture</Typography>
+        <Typography variant="h1" style={{fontSize:'2.986rem',color:'white',fontFamily:'Montserrat, sans-serif', fontWeight:'bold'}} >Faminda Concept, Bureau d'Études en Génie Civil et Architecture</Typography>
         <div style={{display:'block',height:'24px'}}></div>
         <Typography variant='body3' align='center' style={{color:'white',fontFamily:'Montserrat, sans-serif'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines</Typography>
 <div style={{display:'block',height:'16px'}}></div>

@@ -46,7 +46,7 @@ export default function Homes() {
         <div style={{ width:'600px',position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)'}}>
      <Typography variant='h5' align='center' color='#424242' sx={{fontFamily: 'Montserrat, sans-serif'}}>Innovations pour un Monde Durable</Typography>
      <div style={{display:'block',height:'24px'}}></div>
-     <Typography variant='body2'  align='center' color='#9e9e9e'  sx={{fontFamily: 'Montserrat, sans-serif'}} >Chez Faminda Sarl, nous allions créativité et durabilité pour concevoir des espaces respectueux de l'environnement. En intégrant des matériaux écologiques et des solutions énergétiques optimisées, nous créons des projets à la fois fonctionnels et esthétiques. Découvrez comment nos innovations façonnent un avenir plus vert et durable </Typography>
+     <Typography variant='body2'  align='center' color='#9e9e9e'  sx={{fontFamily: 'Montserrat, sans-serif'}} >Chez Faminda, nous allions créativité et durabilité pour concevoir des espaces respectueux de l'environnement. En intégrant des matériaux écologiques et des solutions énergétiques optimisées, nous créons des projets à la fois fonctionnels et esthétiques. Découvrez comment nos innovations façonnent un avenir plus vert et durable </Typography>
      </div>
      </div>
      </>

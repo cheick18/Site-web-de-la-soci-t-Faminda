@@ -46,8 +46,8 @@ const whatsappLink = `https://wa.me/${phoneNumber}`;
     <Link to='/'>   <img src={logoGloire} alt="Logo" style={{ height: 100 , objectFit:'cover'}}  /> </Link> 
         <Typography variant='body2' textAlign='start' style={{color:'#bdbdbd',paddingBlockEnd:'16px',paddingLeft:'16px'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines </Typography>
         <Stack direction='row'spacing={1.5} style={{paddingLeft:'24px',paddingBlockEnd:'64px'}}>
-        <Fab size="small" color="secondary" aria-label="add"><FacebookOutlinedIcon sx={{color:'white'}} /></Fab>
-        <Fab size="small" color="secondary" aria-label="add"><InstagramIcon sx={{color:'white'}} /></Fab>
+        <Link to='/https://www.facebook.com/share/GYZ47uADRJp9TLH7/?mibextid=qi2Omg' style={{textDecoration:'none'}}>   <Fab size="small" color="secondary" aria-label="add"><FacebookOutlinedIcon sx={{color:'white'}} /></Fab></Link>
+        <Link to='/https://www.instagram.com/famindaconcept' style={{textDecoration:'none'}}>   <Fab size="small" color="secondary" aria-label="add"><InstagramIcon sx={{color:'white'}} /></Fab></Link>
         <Link to={whatsappLink}> <Fab size="small" color="secondary" aria-label="add"> <WhatsAppIcon sx={{ color: 'white' }} /> </Fab></Link> 
         <Link to='https://www.linkedin.com/company/famindaconcept/'>  <Fab size="small" color="secondary" aria-label="add"><LinkedInIcon  sx={{color:'white'}} /></Fab></Link>
       
@@ -93,7 +93,7 @@ isXs &&(
         <Typography variant='body2' textAlign='center' style={{color:'#bdbdbd',paddingBlockEnd:'16px',paddingLeft:'16px'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines </Typography>
         <Stack direction='row'spacing={1.5} style={{paddingBlockEnd:'64px'}} justifyContent='center'>
      <Link to='https://www.facebook.com/share/GYZ47uADRJp9TLH7/?mibextid=qi2Omg'> <Fab size="small" color="secondary" aria-label="add"><FacebookOutlinedIcon sx={{color:'white'}} /></Fab></Link>
-        <Fab size="small" color="secondary" aria-label="add"><InstagramIcon  sx={{color:'white'}}  /></Fab>
+      <Link to='https://www.instagram.com/famindaconcept'>  <Fab size="small" color="secondary" aria-label="add"><InstagramIcon  sx={{color:'white'}}  /></Fab></Link>
       <Link to={whatsappLink}> <Fab size="small" color="secondary" aria-label="add"> <WhatsAppIcon sx={{ color: 'white' }} /> </Fab></Link> 
      <Link to='https://www.linkedin.com/company/famindaconcept/'>  <Fab size="small" color="secondary" aria-label="add"><LinkedInIcon  sx={{color:'white'}} /></Fab></Link>
       

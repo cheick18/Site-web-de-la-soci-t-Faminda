@@ -3,13 +3,13 @@ import React from 'react'
 import travaux_1 from '../images/travaux_1.jpg'
 import { Link } from 'react-router-dom'
 
-export default function ProjetItem({title, image, description}) {
+export default function ProjetItem({title, image, path}) {
   return (
  
       <div style={{position:'relative',width:'auto', height:'300px'}}>
       
       <div style={{padding:'0 10px',}}>
-      <Link style={{textDecoration:'none'}}>
+      <Link style={{textDecoration:'none'}} to={path}>
       <Card sx={{ Width: 'auto',padding:'40px' ,border:'none'}} >
      
       <CardMedia

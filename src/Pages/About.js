@@ -70,7 +70,7 @@ export default function About() {
                 <Card sx={{ width: '70%', height: '200px', position: 'absolute', right: 0 }}>
                   <CardContent>
                     <Typography color='secondary' variant='body2'>Ligne standard</Typography>
-                    <Typography color='primary' variant='subtitle1'>+212 665 799 909</Typography>
+                    <Typography color='primary' variant='subtitle1'>+212 655 799 909</Typography>
                     <Typography color='secondary' variant='body2'>Email</Typography>
                     <Typography color='primary' variant='subtitle1'>contact@famindaconcept.com</Typography>
                     <Typography color='secondary' variant='body2'>Adresse</Typography>
