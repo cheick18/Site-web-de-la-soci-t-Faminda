@@ -26,6 +26,10 @@ import Barrages from '../src/Pages/Barrages'
 import TravauxMaritimes from '../src/Pages/TravauxMaritimes'
 import TravaauxDefense from '../src/Pages/TravaauxDefense'
 import ReseauFluide from '../src/Pages/ReseauFluide'
+import EtudesImpact from '../src/Pages/EtudesImpact'
+import VoirieResaux from '../src/Pages/VoirieResaux'
+import SecutieIncendie from '../src/Pages/SecutieIncendie'
+
 
 
 
@@ -104,9 +108,9 @@ function App() {
           <Route path="/travaux-maritimes-fluviaux" element={<TravauxMaritimes />} />
           <Route path="/travaux-genie-defense-caractere-specific" element={<TravaauxDefense />} />
           <Route path="/reseaux-fluides-batiments" element={<ReseauFluide />} />
-          <Route path="/voirie-reseaux-assainissement-eau-potable" element={<Service />} />
-          <Route path="/etudes-impact-environnement" element={<Service />} />
-          <Route path="/securite-contre-incendie-constructions" element={<Service />} />
+          <Route path="/voirie-reseaux-assainissement-eau-potable" element={<VoirieResaux />} />
+          <Route path="/etudes-impact-environnement" element={<EtudesImpact />} />
+          <Route path="/securite-contre-incendie-constructions" element={<SecutieIncendie />} />
           {/**routes realisation detail  Construction-centreculturel-Berkane
            * 
            * construction-student-center-universite-al-khawayne-ifrane
