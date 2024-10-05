@@ -3,7 +3,7 @@ import axios from 'axios';
 import Navbar from '../Components/Navbar';
 import SendIcon from '@mui/icons-material/Send';
 import description from '../Components/description.jpg';
-import { Box, Button, Card, CardContent, Grid, TextField, Typography, useMediaQuery } from '@mui/material';
+import { Box, Button, Card, CardContent, CircularProgress, Grid, TextField, Typography, useMediaQuery } from '@mui/material';
 
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -141,7 +141,9 @@ export default function Contact() {
   const [number, setNumber] = useState('');
   const [EMail, setEMail] = useState('');
   const [Message, setMessage] = useState('');
+  const [organigrame, setOrganigrmae] = useState('');
   const [open, setOpen] = React.useState(false);
+  const [loading,setLoading]=useState(false)
   const handleOpen = () => {
     setOpen(true);
   };
@@ -160,9 +162,17 @@ export default function Contact() {
   }, []);
 
   const handleSubmit = async(event) => {
+    setLoading(true)
+  
+    if(!name||!lastName||!EMail||message){
+      event.preventDefault();
+      alert("Un problème est survenu. Veuillez vérifier vos informations et réessayer")
+   
+
+    }else{
     event.preventDefault(); // Empêche le rechargement de la page
     try {
-      const response = await axios.post('http://localhost:3000/request-reset', {
+      const response = await axios.post('https://backend-site-1h2m.onrender.com/request-reset', {
           name,
           lastName,
           number,
@@ -179,7 +189,8 @@ export default function Contact() {
   } catch (err) {
       console.log('Failed to send message. Please try again.',err);
   }
-};
+}
+}
   
 
   const handleChangeName = (event) => setName(event.target.value);
@@ -187,6 +198,7 @@ export default function Contact() {
   const handleChangeNumber = (event) => setNumber(event.target.value);
   const handleChangeMessage = (event) => setMessage(event.target.value);
   const handleChangeMail = (event) => setEMail(event.target.value);
+  const handleChangeOrganigrame = (event) => setOrganigrmae(event.target.value);
 
   const nom = <Typography component='p' sx={{ padding: 0, margin: 0 }}>Nom<span style={{ color: '#359AF2', padding: '0', margin: 0 }}>*</span></Typography>;
   const prenom = <Typography component='p' sx={{ padding: 0, margin: 0 }}>Prenom<span style={{ color: '#359AF2', padding: '0', margin: 0 }}>*</span></Typography>;
@@ -210,6 +222,23 @@ export default function Contact() {
     p: 4,
   };
  
+
+  if(loading){
+    return (
+      <div style={{display:'block',backgroundColor:'red', margin:'auto'}}>
+
+   
+      <Backdrop
+  sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
+  open={loading}
+
+>
+  <CircularProgress color="inherit" />
+</Backdrop>
+</div>
+    )
+  }
+ else{
 
  
 
@@ -301,8 +330,8 @@ export default function Contact() {
                   <TextField
                     label='organisme'
                     id="filled-size-small3"
-                    value={EMail}
-                    onChange={handleChangeMail}
+                    value={organigrame}
+                    onChange={handleChangeOrganigrame}
                     variant="outlined"
                     size="small"
                     sx={{ width: '100%' }}
@@ -494,4 +523,5 @@ export default function Contact() {
     </>
     
   );
+}
 }

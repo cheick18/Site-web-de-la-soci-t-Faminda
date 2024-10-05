@@ -73,7 +73,7 @@ export default function Services() {
     <Grid container sx={{ padding: '0 4%', paddingTop: '128px', }}>
       <Grid item md={7}>
         <Box>
-          <img src={service_travaux} style={{ width: '100%', height: '508px', borderRadius: '8px' }} />
+          <img src={voirie_reseau} style={{ width: '100%', height: '508px', borderRadius: '8px' }} />
 
         </Box>
 
@@ -164,7 +164,7 @@ export default function Services() {
 <Grid container sx={{ padding: '0 4%', paddingTop: '128px', }}>
   <Grid item md={7}>
     <Box>
-      <img src={service_travaux} style={{ width: '100%', height: '300px', borderRadius: '8px' }} />
+      <img src={voirie_reseau} style={{ width: '100%', height: '300px', borderRadius: '8px' }} />
 
     </Box>
 
