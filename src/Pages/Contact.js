@@ -160,11 +160,15 @@ export default function Contact() {
      
     };
   }, []);
+  function validateEmailSyntax(email) {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  }
 
   const handleSubmit = async(event) => {
-    setLoading(true)
+
   
-    if(!name||!lastName||!EMail||message){
+    if(!name||!lastName||!EMail||message||validateEmailSyntax(EMail)==false){
       event.preventDefault();
       alert("Un problème est survenu. Veuillez vérifier vos informations et réessayer")
    
@@ -177,7 +181,8 @@ export default function Contact() {
           lastName,
           number,
           EMail,
-          Message
+          Message,
+          organigrame
       });
     //  console.log(response.data);
       handleOpen()
