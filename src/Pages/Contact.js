@@ -171,6 +171,7 @@ export default function Contact() {
     if(!name||!lastName||!EMail||message||validateEmailSyntax(EMail)==false){
       event.preventDefault();
       alert("Un problème est survenu. Veuillez vérifier vos informations et réessayer")
+      console.log("une erreur c'est produite")
    
 
     }else{
