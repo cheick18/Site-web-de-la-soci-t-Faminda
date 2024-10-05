@@ -168,7 +168,7 @@ export default function Contact() {
   const handleSubmit = async(event) => {
 
   
-    if(!name||!lastName||!EMail||message||validateEmailSyntax(EMail)==false){
+    if(!name||!lastName||!EMail||!message||validateEmailSyntax(EMail)==false){
       event.preventDefault();
       alert("Un problème est survenu. Veuillez vérifier vos informations et réessayer")
       console.log("une erreur c'est produite")
@@ -335,7 +335,7 @@ export default function Contact() {
                 <Grid item md={12} xs={12} sx={{  paddingBlockStart: '40px' }}>
                   <TextField
                     label='organisme'
-                    id="filled-size-small3"
+                    id="filled-size-small30"
                     value={organigrame}
                     onChange={handleChangeOrganigrame}
                     variant="outlined"
