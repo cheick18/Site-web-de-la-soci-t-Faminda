@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';
 import Homes from './Pages/Homes';
+import TestVideo from './Pages/TestVideo'
 import Contact from './Pages/Contact';
 import About from './Pages/About';
 import NotFound from './Pages/NotFound';
@@ -96,6 +97,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/realisations" element={<Realisations />} />
+            <Route path="/test" element={<TestVideo />} />
+            
           
           {/** <Route path="/service" element={<Service />} /> */} 
           <Route path="/calcul-structures-batiments" element={<CalculStrucure />} />

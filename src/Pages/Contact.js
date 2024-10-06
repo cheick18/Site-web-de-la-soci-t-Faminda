@@ -191,6 +191,7 @@ export default function Contact() {
       setLastName('')
       setMessage('')
       setNumber('')
+      setName('')
       
   } catch (err) {
       console.log('Failed to send message. Please try again.',err);
