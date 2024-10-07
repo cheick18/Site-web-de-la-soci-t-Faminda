@@ -107,15 +107,16 @@ export default function () {
        key={services[0].index}
        to={services[0].path}
        state={{ title: services[0].title, image: services[0].image,body:services[0].body }}
+       style={{textDecoration:'none'}}
 
      >
         <div style={{height: isSm?'424px':'250px', width:isXs?'100%':'500px',backgroundColor:'black',borderRadius:'8px', }} data-aos="fade-up" 
      data-aos-anchor-placement="bottom-bottom">
           <img src={service_etudes}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
 
-{isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif', color:'secondary'}} >Études architecturales et suivi des projets</Typography>  
+{isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',  color:'#424242'}} >Études architecturales et suivi des projets</Typography>  
          )}
-          {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif', color:'secondary'}} >Études architecturales et suivi des projets</Typography>  
+          {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Études architecturales et suivi des projets</Typography>  
          )}
         </div>
         </Link>
@@ -123,6 +124,7 @@ export default function () {
         </Grid>
         <Grid  item md={6}  xs={12} sx={{alignItems:'end',position:'relative',top:isXs?'108px':'0'}}>
           <Link  key={services[0].index}
+          style={{textDecoration:'none'}}
        to={services[1].path}
        state={{ title: services[1].title, image: services[1].image,body:services[1].body }}>
         <div style={{height:isXs?'250px':'608px', width:isXs?'100%':'500px',float:'right', borderRadius:'8px',backgroundColor:'black'}} data-aos="fade-up"
@@ -130,9 +132,9 @@ export default function () {
      >  
           <img src={service_travaux}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
         
-        {isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',color:'secondary',textDecoration:'underline'}} >Calcul de structure pour bâtiments à tous usages</Typography>
+        {isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Calcul de structure pour bâtiments à tous usages</Typography>
            )}
-          {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'secondary',textDecoration:'underline'}} >Calcul de structure pour bâtiments à tous usages</Typography>
+          {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Calcul de structure pour bâtiments à tous usages</Typography>
            )}
         </div>
         </Link>
@@ -145,29 +147,31 @@ export default function () {
             <Grid  item md={6} xs={12}  sx={{backgroundColor:'white', }}>
               <div style={{height:'90px', display:isXs?'block':'none'}}></div>
      <Link  key={services[2].index}
+     style={{textDecoration:'none'}}
        to={services[2].path}
        state={{ title: services[2].title, image: services[2].image,body:services[2].body }}>
         <div style={{height:isXs?'250px':'608px', width:isXs?'100%':'500px',borderRadius:'8px', backgroundColor:'black' }}  data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom">
           <img src={hydraulique_urbaine}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
 
-{isSm&&( <Typography variant='h5'  sx={{fontFamily: 'Montserrat, sans-serif',color:'secondary'}} >Hydraulique urbaine</Typography> )}
-{isXs&&( <Typography variant='h6'  sx={{fontFamily: 'Montserrat, sans-serif',color:'secondary'}} >Hydraulique urbaine</Typography> )}
+{isSm&&( <Typography variant='h5'  sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Hydraulique urbaine</Typography> )}
+{isXs&&( <Typography variant='h6'  sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Hydraulique urbaine</Typography> )}
            
         </div>
         </Link>
         </Grid>
-        <Grid  item md={6}  sx={{alignItems:'end',position:'relative',top:isXs?'108px':'0'}}>
+        <Grid  item md={6} xs={12}  sx={{alignItems:'end',position:'relative',top:isXs?'108px':'0'}}>
           <Link  key={services[4].index}
+          style={{textDecoration:'none'}}
        to={services[4].path}
        state={{ title: services[4].title, image: services[4].image,body:services[4].body }}>
         <div style={{height: isSm?'424px':'250px', width:isXs?'100%':'500px',float:'right', borderRadius:'8px', backgroundColor:'black'}}  data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom">  
           <img src={barages}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
         
-        {isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',color:'secondary',textDecoration:'underline'}} >Barages</Typography>
+        {isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242',}} >Barages</Typography>
            )}
-             {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'secondary',textDecoration:'underline'}} >Barages</Typography>
+             {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Barages</Typography>
            )}
            
         </div>

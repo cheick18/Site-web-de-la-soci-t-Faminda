@@ -89,7 +89,10 @@ const whatsappLink = `https://wa.me/${phoneNumber}`;
 isXs &&(
   <>
    <Grid item xs={12} style={{padding:'0 5%'}}>
+   <Link to='/'>
    <img src={logoGloire} alt="Logo" style={{ height: 70 , objectFit:'cover'}}  />
+   </Link>
+
         <Typography variant='body2' textAlign='center' style={{color:'#bdbdbd',paddingBlockEnd:'16px',paddingLeft:'16px'}}>Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines </Typography>
         <Stack direction='row'spacing={1.5} style={{paddingBlockEnd:'64px'}} justifyContent='center'>
      <Link to='https://www.facebook.com/share/GYZ47uADRJp9TLH7/?mibextid=qi2Omg'> <Fab size="small" color="secondary" aria-label="add"><FacebookOutlinedIcon sx={{color:'white'}} /></Fab></Link>
