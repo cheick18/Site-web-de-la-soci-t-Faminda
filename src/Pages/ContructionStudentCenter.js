@@ -5,6 +5,11 @@ import 'react-image-gallery/styles/css/image-gallery.css'; // Importer les style
 import student_center_universite_alkhawayne_Ifrane_1 from '../images/projets/student_center_universite_alkhawayne_Ifrane_1.jpg'
 import student_center_universite_alkhawayne_Ifrane_2 from '../images/projets/student_center_universite_alkhawayne_Ifrane_2.jpg'
 import student_center_universite_alkhawayne_Ifrane_3 from '../images/projets/student_center_universite_alkhawayne_Ifrane_3.jpg'
+import student from '../images/projets/student.mp4'
+
+
+
+
 import { Box, Divider, Typography } from '@mui/material';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -21,6 +26,9 @@ export default function DetailRealisation() {
   useEffect(() => {
     // Réinitialiser la position de défilement à 0
     window.scrollTo(0, 0);
+
+
+
 
   
     return () => {
@@ -42,10 +50,29 @@ export default function DetailRealisation() {
             original: student_center_universite_alkhawayne_Ifrane_3,
             thumbnail: student_center_universite_alkhawayne_Ifrane_3,
         },
+        {
+          original:student, 
+          thumbnail: student_center_universite_alkhawayne_Ifrane_1, // Miniature de la vidéo
+          embed: true, 
+      },
   
     ];
     //construction-centreculturel-Berkane.html
+    
+    const renderGalleryItem = (item) => {
+      if (item.embed) {
+          return (
+              <div>
+                  <video controls style={{ width: '100%' }}>
+                      <source src={item.original} type="video/mp4" />
+                      Votre navigateur ne supporte pas la lecture de vidéos.
+                  </video>
+              </div>
+          );
+      }
 
+      return <img src={item.original} alt={item.thumbnail} style={{ width: '100%' }} />;
+  };
     return (
         <>
            <Typography variant='h4'  color='#424242' sx={{fontFamily: 'Montserrat, sans-serif', paddingTop:'48px', margin: '0 5%'}}>Construction de student center de l’université <br></br> Al Khawayne d’Ifrane</Typography>
@@ -65,6 +92,7 @@ export default function DetailRealisation() {
                     slideDuration={300} 
                     thumbnailPosition="bottom" // Position des miniatures
                     slideInterval={3000} 
+                    renderItem={renderGalleryItem}
                     renderLeftNav={() => null} 
                     renderRightNav={() => null} 
                     thumbnailClass="custom-thumbnail" 

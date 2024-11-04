@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 
 
-export default function Text_image({them}) {
+export default function Text_image({them,t,i18n}) {
   const isXs = useMediaQuery((them) => them.breakpoints.only('xs'));
   const isSm = useMediaQuery((them) => them.breakpoints.up('sm'))
   return (
@@ -23,11 +23,11 @@ export default function Text_image({them}) {
           />
           </Grid>
           <Grid item md={5} sx={12} >
-                <Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif'}} > Nous Construisons L'avenir</Typography>
+                <Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif'}} > {t("Nous Construisons L'avenir")}</Typography>
                 <div style={{display:'block',height:'20px'}}></div>
-                <Typography variant='body2' sx={{fontFamily: 'Montserrat, sans-serif'}} >Faminda est un bureau d’études spécialisé en génie civil et architecture. Nous offrons une gamme complète de services pour répondre aux besoins de nos clients dans divers domaines</Typography>
+                <Typography variant='body2' sx={{fontFamily: 'Montserrat, sans-serif'}} >{t("Faminda description")}</Typography>
                 <div style={{display:'block',height:'20px'}}></div>
- <Link to='/contact'><Button size="small"  variant='contained'  color='secondary' sx={{color:'white'}}>Contactez-nous</Button></Link> 
+ <Link to='/contact'><Button size="small"  variant='contained'  color='secondary' sx={{color:'white'}}>{t("Contactez-nous")}</Button></Link> 
 
             </Grid>
 
@@ -40,9 +40,9 @@ export default function Text_image({them}) {
           <>
           <Grid contained style={{padding:" 8% 5%",backgroundColor:'#EFEFEF'}}>
             <Grid item sx={12}>
-            <Typography variant='h5' style={{textAlign:'center',fontFamily: 'Montserrat, sans-serif'}}> Nous Construisons L'avenir</Typography>
+            <Typography variant='h5' style={{textAlign:'center',fontFamily: 'Montserrat, sans-serif'}}> {t("Nous Construisons L'avenir")}</Typography>
                 <div style={{display:'block',height:'20px'}}></div>
-                <Typography variant='body2' style={{textAlign:'center',fontFamily: 'Montserrat, sans-serif'}}>Chez Faminda Sarl, nous allions créativité et durabilité pour concevoir des espaces respectueux de l'environnement. En intégrant des matériaux écologiques et des solutions énergétiques optimisées, nous créons des projets à la fois fonctionnels et esthétiques. Découvrez comment nos innovations façonnent un avenir plus vert et durable</Typography>
+                <Typography variant='body2' style={{textAlign:'center',fontFamily: 'Montserrat, sans-serif'}}>{t('description')}</Typography>
                 <div style={{display:'block',height:'20px'}}></div>
 
 

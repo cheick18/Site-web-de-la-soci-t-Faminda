@@ -27,7 +27,7 @@ import  securité from '../images/securité.jpg';
 
 
 
-export default function Services() {
+export default function Services({t}) {
   
   const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
   const isSm = useMediaQuery((theme) => theme.breakpoints.up('sm'));
@@ -56,10 +56,10 @@ export default function Services() {
 
       <Box style={{ position: 'absolute', top: 0, display: 'block', height: '470px', width: '100%' }}>
         <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
-        {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Réseaux des fluides pour bâtiments</Typography>
+        {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Réseaux des fluides pour bâtiments')}</Typography>
 
 )}
-    {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Réseaux des fluides pour bâtiments</Typography>
+    {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Réseaux des fluides pour bâtiments')}</Typography>
 
 )}
 
@@ -94,7 +94,7 @@ export default function Services() {
           </Grid>
           <Grid item md={11}  >
 
-            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >Plomberie, assainissement, chauffage, climatisation et ventilation mécanique</Typography>
+            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >{t('Réseaux des fluides1')}</Typography>
 
 
           </Grid>
@@ -112,7 +112,7 @@ export default function Services() {
           </Grid>
           <Grid item md={11}  >
 
-            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >Fluides médicaux</Typography>
+            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >{t('Réseaux des fluides2')}</Typography>
 
 
           </Grid>
@@ -145,10 +145,10 @@ export default function Services() {
   <Box style={{ position: 'absolute', top: 0, display: 'block', height: '470px', width: '100%' }}>
     <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
 
-    {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Réseaux des fluides pour bâtiments</Typography>
+    {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Réseaux des fluides pour bâtiments')}</Typography>
 
          )}
-             {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Réseaux des fluides pour bâtiments</Typography>
+             {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >t{'Réseaux des fluides pour bâtiments'}</Typography>
 
          )}
      
@@ -185,7 +185,7 @@ export default function Services() {
            <CheckIcon sx={{ width: 15, height: 15}} />
            </Avatar>
         
-      <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif' ,paddingLeft:'10px'}}>Plomberie, assainissement, chauffage, climatisation et ventilation mécanique</Typography>
+      <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif' ,paddingLeft:'10px'}}>{t('Réseaux des fluides1')}</Typography>
     </Box>
  
 
@@ -205,7 +205,7 @@ export default function Services() {
    </Avatar>
 
 
-   <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px',paddingLeft:'10px',paddingBottom:'40px' }} >Fluides médicaux</Typography>
+   <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px',paddingLeft:'10px',paddingBottom:'40px' }} >{t('Réseaux des fluides2')}</Typography>
 
 </Box>
 

@@ -10,6 +10,8 @@ import Projects from '../Components/Projects';
 import '../App.css'
 import Footer from '../Components/Footer';
 import Partenaire from '../Components/Partenaire';
+import { UseContext } from '../Services/UseContext';
+import Loading from '../Components/Loading';
 
 
 
@@ -17,9 +19,11 @@ import Partenaire from '../Components/Partenaire';
 
 
 
-export default function Homes() {
+export default function Homes({t,i18n}) {
+ 
     const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
     const isSm = useMediaQuery((theme) => theme.breakpoints.up('sm'));
+   
     useEffect(() => {
       // Réinitialiser la position de défilement à 0
       window.scrollTo(0, 0);
@@ -32,8 +36,8 @@ export default function Homes() {
     
   return (
     <>
-     <Header />
-     <Typography variant='h5' align='center' color='#424242' sx={{fontFamily: 'Montserrat, sans-serif', paddingTop:'32px'}}>Confiance Partagée avec Nos Partenaires</Typography>
+     <Header t={t} i18n={i18n} />
+     <Typography variant='h5' align='center' color='#424242' sx={{fontFamily: 'Montserrat, sans-serif', paddingTop:'32px'}}>{t('Confiance Partagée avec Nos Partenaires')}</Typography>
    
    <Partenaire />
   
@@ -44,9 +48,9 @@ export default function Homes() {
      data-aos-delay="300"
      data-aos-offset="0">
         <div style={{ width:'600px',position:'absolute', top:'50%', left:'50%', transform:'translate(-50%,-50%)'}}>
-     <Typography variant='h5' align='center' color='#424242' sx={{fontFamily: 'Montserrat, sans-serif'}}>Innovations pour un Monde Durable</Typography>
+     <Typography variant='h5' align='center' color='#424242' sx={{fontFamily: 'Montserrat, sans-serif'}}>{t('Innovations pour un Monde Durable')}</Typography>
      <div style={{display:'block',height:'24px'}}></div>
-     <Typography variant='body2'  align='center' color='#9e9e9e'  sx={{fontFamily: 'Montserrat, sans-serif'}} >Chez Faminda, nous allignons créativité et durabilité pour concevoir des espaces respectueux de l'environnement. En intégrant des matériaux écologiques et des solutions énergétiques optimisées, nous créons des projets à la fois fonctionnels et esthétiques. Découvrez comment nos innovations façonnent un avenir plus vert et durable </Typography>
+     <Typography variant='body2'  align='center' color='#9e9e9e'  sx={{fontFamily: 'Montserrat, sans-serif'}} >{t('description')}</Typography>
      </div>
      </div>
      </>
@@ -58,19 +62,20 @@ export default function Homes() {
       </>
      )}
     
-     <Text_image />
-     <FewServices />
+     <Text_image  t={t} i18n={i18n} />
+     <FewServices  t={t} i18n={i18n} />
 
   {/**   <Video />*/} 
      <SpaceBetween />
-     {isSm&&( <Typography variant='h4'  sx={{fontFamily: 'Montserrat, sans-serif', paddingBlockEnd:'48px',textAlign:'center'}}>À Découvrir : Nos Projets</Typography>
+     {isSm&&( <Typography variant='h4'  sx={{fontFamily: 'Montserrat, sans-serif', paddingBlockEnd:'48px',textAlign:'center'}}>{t('À Découvrir : Nos Projets')}</Typography>
   )}
-      {isXs&&( <Typography variant='h5'  sx={{fontFamily: 'Montserrat, sans-serif', paddingBlockEnd:'48px',textAlign:'center'}}>À Découvrir : Nos Projets</Typography>
+      {isXs&&( <Typography variant='h5'  sx={{fontFamily: 'Montserrat, sans-serif', paddingBlockEnd:'48px',textAlign:'center'}}>{t('À Découvrir : Nos Projets')}</Typography>
   )}
      
      
     
-   <Projects />
+   <Projects  t={t} i18n={i18n} />
+
    <Footer />
     </>
   )

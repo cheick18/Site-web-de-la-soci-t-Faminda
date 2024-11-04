@@ -27,7 +27,7 @@ import  securité from '../images/securité.jpg';
 
 
 
-export default function Services() {
+export default function Services({t,i18n}) {
   
   const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
   const isSm = useMediaQuery((theme) => theme.breakpoints.up('sm'));
@@ -56,10 +56,10 @@ export default function Services() {
 
       <Box style={{ position: 'absolute', top: 0, display: 'block', height: '470px', width: '100%' }}>
         <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
-        {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Calcul de structure pour bâtiments à tous usages</Typography>
+        {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Calcul de structure pour bâtiments à tous usages')}</Typography>
 
 )}
-    {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Calcul de structure pour bâtiments à tous usages</Typography>
+    {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Calcul de structure pour bâtiments à tous usages')}</Typography>
 
 )}
 
@@ -94,7 +94,7 @@ export default function Services() {
           </Grid>
           <Grid item md={11}  >
 
-            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >Calcul de structures en béton armé, béton précontraint, charpente métallique et charpente en bois</Typography>
+            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >{t('Calcul de structures en béton armé, béton précontraint, charpente métallique et charpente en bois')}</Typography>
 
 
           </Grid>
@@ -112,7 +112,7 @@ export default function Services() {
           </Grid>
           <Grid item md={11}  >
 
-            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >Conception et dimensionnement pour des bâtiments résidentiels, industriels, commerciaux, éducatifs, médicaux et autres</Typography>
+            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >{t('Calcul de strucure 2')}</Typography>
 
 
           </Grid>
@@ -145,10 +145,10 @@ export default function Services() {
   <Box style={{ position: 'absolute', top: 0, display: 'block', height: '470px', width: '100%' }}>
     <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
 
-    {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Calcul de structure pour bâtiments à tous usages</Typography>
+    {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Calcul de structure pour bâtiments à tous usages')}</Typography>
 
          )}
-             {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Calcul de structure pour bâtiments à tous usages</Typography>
+             {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Calcul de structure pour bâtiments à tous usages')}</Typography>
 
          )}
      
@@ -186,7 +186,7 @@ export default function Services() {
            </Avatar>
         
       <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif' ,paddingLeft:'10px'}}>
-      Calcul de structures en béton armé, béton précontraint, charpente métallique et charpente en bois</Typography>
+      {t('Calcul de structures en béton armé, béton précontraint, charpente métallique et charpente en bois')}</Typography>
     </Box>
  
 
@@ -206,7 +206,7 @@ export default function Services() {
    </Avatar>
 
 
-   <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px',paddingLeft:'10px',paddingBottom:'40px' }} >Conception et dimensionnement pour des bâtiments résidentiels, industriels,commerciaux, éducatifs, médicaux et autres</Typography>
+   <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px',paddingLeft:'10px',paddingBottom:'40px' }} >{t('Calcul de strucure 2')}</Typography>
 
 </Box>
 

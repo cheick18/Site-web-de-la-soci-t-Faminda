@@ -11,7 +11,7 @@ import hydraulique_urbaine from '../images/hydraulique_urbaine.jpg'
 
 
 
-export default function () {
+export default function ({t,i18n}) {
   const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
   const isSm = useMediaQuery((theme) => theme.breakpoints.up('sm'));
   const services=[
@@ -97,9 +97,9 @@ export default function () {
   
  
       <Grid container sx={{padding:'108px 4%'}}>
-        {isSm&&( <Grid  item md={12}  sx={{paddingBlockEnd:'64px'}}>   <Typography variant=  'h4'  sx={{fontFamily: 'Montserrat, sans-serif'}}>Decouvrez Notre Savoir Faire</Typography></Grid>
+        {isSm&&( <Grid  item md={12}  sx={{paddingBlockEnd:'64px'}}>   <Typography variant=  'h4'  sx={{fontFamily: 'Montserrat, sans-serif'}}>{t('Découvrez Notre Savoir-Faire')}</Typography></Grid>
    )}
-        {isXs&&( <Grid  item md={12}  sx={{paddingBlockEnd:'64px'}}>   <Typography variant=  'h5'  sx={{fontFamily: 'Montserrat, sans-serif'}}>Decouvrez Notre Savoir Faire</Typography></Grid>
+        {isXs&&( <Grid  item md={12}  sx={{paddingBlockEnd:'64px'}}>   <Typography variant=  'h5'  sx={{fontFamily: 'Montserrat, sans-serif'}}>{t('Découvrez Notre Savoir-Faire')}</Typography></Grid>
    )}
         
         <Grid  item md={6}  xs={12} sx={{backgroundColor:'white'}}>
@@ -114,9 +114,9 @@ export default function () {
      data-aos-anchor-placement="bottom-bottom">
           <img src={service_etudes}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
 
-{isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',  color:'#424242'}} >Études architecturales et suivi des projets</Typography>  
+{isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',  color:'#424242'}} >{t('Études architecturales et suivi des projets')}</Typography>  
          )}
-          {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Études architecturales et suivi des projets</Typography>  
+          {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >{t('Études architecturales et suivi des projets')}</Typography>  
          )}
         </div>
         </Link>
@@ -132,9 +132,9 @@ export default function () {
      >  
           <img src={service_travaux}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
         
-        {isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Calcul de structure pour bâtiments à tous usages</Typography>
+        {isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >{t('Calcul de structure pour bâtiments à tous usages')}</Typography>
            )}
-          {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Calcul de structure pour bâtiments à tous usages</Typography>
+          {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >{t('Calcul de structure pour bâtiments à tous usages')}</Typography>
            )}
         </div>
         </Link>
@@ -154,8 +154,8 @@ export default function () {
      data-aos-anchor-placement="bottom-bottom">
           <img src={hydraulique_urbaine}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
 
-{isSm&&( <Typography variant='h5'  sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Hydraulique urbaine</Typography> )}
-{isXs&&( <Typography variant='h6'  sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Hydraulique urbaine</Typography> )}
+{isSm&&( <Typography variant='h5'  sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} > {t('Hydraulique urbaine')}</Typography> )}
+{isXs&&( <Typography variant='h6'  sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >{t('Hydraulique urbaine')}</Typography> )}
            
         </div>
         </Link>
@@ -169,9 +169,9 @@ export default function () {
      data-aos-anchor-placement="bottom-bottom">  
           <img src={barages}  style={{width:'100%',height:'100%',borderRadius:'8px'}} onMouseEnter={mouseenter} onMouseLeave={mouseleave}/>
         
-        {isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242',}} >Barages</Typography>
+        {isSm&&(<Typography variant='h5' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242',}} >{t('Barrages')}</Typography>
            )}
-             {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >Barages</Typography>
+             {isXs&&(<Typography variant='h6' sx={{fontFamily: 'Montserrat, sans-serif',color:'#424242'}} >{t('Barrages')}</Typography>
            )}
            
         </div>

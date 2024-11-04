@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext,useState } from 'react';
 
 
 import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';
@@ -32,6 +32,7 @@ import ReseauFluide from '../src/Pages/ReseauFluide'
 import EtudesImpact from '../src/Pages/EtudesImpact'
 import VoirieResaux from '../src/Pages/VoirieResaux'
 import SecutieIncendie from '../src/Pages/SecutieIncendie'
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -43,12 +44,12 @@ import DetailRealisation from './Components/DetailRealisation';
 import Arrow from './Components/Arrow';
 
 
-
+const UserContext = createContext()
 
 function App() {
 
 
-
+  const { t, i18n } = useTranslation();
   const theme = createTheme({
     palette: {
       primary: {
@@ -89,7 +90,7 @@ function App() {
   });
 
   return (
- 
+    <UserContext.Provider >
       <div className="App">
           <ThemeProvider theme={theme}>
     
@@ -99,27 +100,27 @@ function App() {
           <Arrow />
       
           <Routes>
-            <Route path="/" element={<Homes />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/realisations" element={<Realisations />} />
+            <Route path="/" element={<Homes t={t} i18n={i18n} />} />
+            <Route path="/contact" element={<Contact t={t} i18n={i18n}/>} />
+            <Route path="/about" element={<About t={t} i18n={i18n} />} />
+            <Route path="/realisations" element={<Realisations t={t} i18n={i18n} />} />
             <Route path="/test" element={<TestVideo />} />
             
           
           {/** <Route path="/service" element={<Service />} /> */} 
-          <Route path="/calcul-structures-batiments" element={<CalculStrucure />} />
-          <Route path="/etudes-architecturales-suivi-projets" element={<EtudesArchitecurales />} />
-          <Route path="/etudes-generales" element={<EtudesGenerales />} />
-          <Route path="/barrages" element={<Barrages />} />
-          <Route path="/hydraulique-urbaine" element={<HydrauliqueUrbaine />} />
-          <Route path="/routes-autoroutes-transports" element={<RoutesAutoroutes />} />
-          <Route path="/ouvrages-d-art" element={<OuvragesArt />} />
-          <Route path="/travaux-maritimes-fluviaux" element={<TravauxMaritimes />} />
-          <Route path="/travaux-genie-defense-caractere-specific" element={<TravaauxDefense />} />
-          <Route path="/reseaux-fluides-batiments" element={<ReseauFluide />} />
-          <Route path="/voirie-reseaux-assainissement-eau-potable" element={<VoirieResaux />} />
-          <Route path="/etudes-impact-environnement" element={<EtudesImpact />} />
-          <Route path="/securite-contre-incendie-constructions" element={<SecutieIncendie />} />
+          <Route path="/calcul-structures-batiments" element={<CalculStrucure  t={t} i18n={i18n} />} />
+          <Route path="/etudes-architecturales-suivi-projets" element={<EtudesArchitecurales  t={t} i18n={i18n} />} />
+          <Route path="/etudes-generales" element={<EtudesGenerales  t={t} i18n={i18n} />} />
+          <Route path="/barrages" element={<Barrages  t={t} i18n={i18n} />} />
+          <Route path="/hydraulique-urbaine" element={<HydrauliqueUrbaine  t={t} i18n={i18n} />} />
+          <Route path="/routes-autoroutes-transports" element={<RoutesAutoroutes  t={t} i18n={i18n} />} />
+          <Route path="/ouvrages-d-art" element={<OuvragesArt  t={t} i18n={i18n} />} />
+          <Route path="/travaux-maritimes-fluviaux" element={<TravauxMaritimes  t={t} i18n={i18n} />} />
+          <Route path="/travaux-genie-defense-caractere-specific" element={<TravaauxDefense t={t} i18n={i18n} />}   />
+          <Route path="/reseaux-fluides-batiments" element={<ReseauFluide  t={t} i18n={i18n} />} />
+          <Route path="/voirie-reseaux-assainissement-eau-potable" element={<VoirieResaux  t={t} i18n={i18n} />} />
+          <Route path="/etudes-impact-environnement" element={<EtudesImpact  t={t} i18n={i18n} />} />
+          <Route path="/securite-contre-incendie-constructions" element={<SecutieIncendie t={t} i18n={i18n} />}  t={t} i18n={i18n} />
           {/**routes realisation detail  Construction-centreculturel-Berkane
            * 
            * construction-student-center-universite-al-khawayne-ifrane
@@ -160,6 +161,7 @@ function App() {
         </div>
         </ThemeProvider>
       </div>
+      </UserContext.Provider>
 
   );
 }

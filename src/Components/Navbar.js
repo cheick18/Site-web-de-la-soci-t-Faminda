@@ -6,6 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import { useTranslation } from 'react-i18next';
 
 import MailIcon from '@mui/icons-material/Mail';
 import { UseContext } from '../Services/UseContext'
@@ -45,7 +46,12 @@ import  securité from '../images/securité.jpg';
 
 export default function Navbar() {
 
+  const { i18n,t } = useTranslation();
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setAnchorElLangue(null);
+  };
   
  
     const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
@@ -65,6 +71,7 @@ export default function Navbar() {
     };
     const handleCloseLangue = () => {
       setAnchorElLangue(null);
+      
     };
 
     /* section drwer */
@@ -76,6 +83,26 @@ export default function Navbar() {
     setOpenList(!openList);
   };
      
+  const [openMylangue, setOpenMyLangue] = React.useState(false);
+
+  const handleClickMyLangue = () => {
+    setOpenMyLangue(!openMylangue);
+
+  };
+
+const switchToFrensh=()=>{
+  changeLanguage('fr')
+  setOpenDrawer(false)
+  setOpenMyLangue(false)
+
+}
+
+const switchToEnglish=()=>{
+  changeLanguage('en')
+  setOpenDrawer(false)
+  setOpenMyLangue(false)
+
+}
 
   const routeState = {
     image: service_travaux,
@@ -84,7 +111,7 @@ export default function Navbar() {
 const services=[
   {
     path: '/calcul-structures-batiments',
-    title: 'Calcul de structures pour bâtiments à tous usages',
+    title: t('Calcul de structure pour bâtiments à tous usages'),
     image: service_travaux,
     body:{
       one:'Calcul de structures en béton armé, béton précontraint, charpente métallique et charpente en bois.',
@@ -93,7 +120,7 @@ const services=[
   },
   {
     path: '/etudes-architecturales-suivi-projets',
-    title: 'Études architecturales et suivi des projets',
+    title: t('Études architecturales et suivi des projets'),
     image: service_etudes,
     body:{
       one:'Analyse technique et conception architecturale.',
@@ -102,7 +129,7 @@ const services=[
   },
   {
     path: '/etudes-generales',
-    title: 'Études générales',
+    title: t('Études générales'),
     image: etudes,
     body:{
       one:'Planification, gestion de projet, économie, sociologie, météorologie, impact environnemental et qualité',
@@ -111,7 +138,7 @@ const services=[
   },
   {
     path: '/hydraulique-urbaine',
-    title: 'Hydraulique urbaine',
+    title: t('Hydraulique urbaine'),
     image: hydraulique_urbaine,
     body:{
       one:'Adduction et distribution d’eau',
@@ -120,7 +147,7 @@ const services=[
   },
   {
     path: '/routes-autoroutes-transports',
-    title: 'Routes, autoroutes et transports',
+    title: t('Routes, autoroutes et transports'),
     image: routes_autoriutes_transports,
     body:{
       one:'Conception et planification de routes, autoroutes et voies ferrées.',
@@ -129,7 +156,7 @@ const services=[
   },
   {
     path: '/ouvrages-d-art',
-    title: 'Ouvrages d’art',
+    title: t("Ouvrages d’art"),
     image: ouvrage,
     body:{
       one:'Ponts, aqueducs, réservoirs et tunnels.',
@@ -138,7 +165,7 @@ const services=[
   },
   {
     path: '/barrages',
-    title: 'Barrages',
+    title: t('Barrages'),
     image: barrages,
     body:{
       one:'Conception et construction de grands barrages et barrages collinaires.',
@@ -147,7 +174,7 @@ const services=[
   },
   {
     path: '/travaux-maritimes-fluviaux',
-    title: 'Travaux maritimes et fluviaux',
+    title: t("Travaux maritimes et fluviaux"),
     image: travaux_maritimes,
     body:{
       one:'Ports maritimes et fluviaux.',
@@ -156,7 +183,7 @@ const services=[
   },
   {
     path: '/travaux-genie-defense-caractere-specific',
-    title: 'Travaux du génie de défense à caractère spécifique',
+    title: t("Travaux du génie de défense à caractère spécifique"),
     image: travaux_genie_defense,
     body:{
       one:'Construction d’abris et de fortifications.',
@@ -165,7 +192,7 @@ const services=[
   },
   {
     path: '/reseaux-fluides-batiments',
-    title: 'Réseaux des fluides pour bâtiments',
+    title: t("Réseaux des fluides pour bâtiments"),
     image: reseau_fluides,
     body:{
       one:'Conception et entretien des infrastructures routières et des réseaux d’assainissement.',
@@ -174,7 +201,7 @@ const services=[
   },
   {
     path: '/voirie-reseaux-assainissement-eau-potable',
-    title: 'Voirie, réseaux d’assainissement et eau potable',
+    title: t("Voirie, réseaux d’assainissement et eau potable"),
     image: voirie_reseau,
     body:{
       one:'Adduction et distribution d’eau',
@@ -183,7 +210,7 @@ const services=[
   },
   {
     path: '/etudes-impact-environnement',
-    title: 'Études d’impact sur l’environnement',
+    title: t("Études d’impact sur l’environnement"),
     image: etude_impact_envirornement,
     body:{
       one:'Évaluations environnementales conformes aux lois et règlements en vigueur.',
@@ -192,7 +219,7 @@ const services=[
   },
     {
       path: '/securite-contre-incendie-constructions',
-      title: 'Sécurité contre l’incendie dans les constructions',
+      title: t("Sécurité contre l’incendie dans les constructions"),
       image: securité,
       body:{
         one:'Mesures de prévention et de sécurité pour protéger les bâtiments contre les incendies.',
@@ -260,15 +287,15 @@ const services=[
       */}
       </Menu>
 </Stack>
-<Link to="/realisations">  <Button style={{color:'white'}}>Réalisations</Button> </Link>
-<Link to="/about">  <Button style={{color:'white'}}>À propos</Button> </Link>
-{/*
-<Link to="/contact"> <Button style={{color:'white'}}  endIcon={<ArrowDropDownIcon />} id="basic-button"
+<Link to="/realisations">  <Button style={{color:'white'}}>{t('Réalisations')}</Button> </Link>
+<Link to="/about">  <Button style={{color:'white'}}>{t('À propos')}</Button> </Link>
+
+ <Button style={{color:'white'}}  endIcon={<ArrowDropDownIcon />} id="basic-button"
         aria-controls={openLangue ? 'basic-Langue' : undefined}
         aria-haspopup="true"
         aria-expanded={openLangue ? 'true' : undefined}
-        onClick={handleClickLangue}  >Francais</Button> </Link>
-      */}
+        onClick={handleClickLangue}  >{t('Langue')}</Button> 
+      
 <Menu
         id="basic-Langue"
         anchorEl={anchorElLangue}
@@ -278,11 +305,12 @@ const services=[
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleCloseLangue}>Anglais</MenuItem>
+        <MenuItem  onClick={() => changeLanguage('en')}> {t('Anglais')}</MenuItem>
+        <MenuItem  onClick={() => changeLanguage('fr')}> {t('Francais')}</MenuItem>
        
   
       </Menu>
-<Link to="/contact">  <Button style={{color:'white'}}>Contactez-nous</Button></Link>
+<Link to="/contact">  <Button style={{color:'white'}}>{t('Contactez-nous')}</Button></Link>
 
     </Stack>
     </>)}
@@ -350,7 +378,7 @@ const services=[
           <DraftsIcon />
         </ListItemIcon>
     */}
-        <ListItemText primary="Réalisations" />
+        <ListItemText primary={t("Réalisations")} />
       </ListItemButton>
       </Link>
       <Link to='/about' style={{textDecoration:'none', color:'#212121'}} onClick={()=>setOpenDrawer(false)} >
@@ -361,29 +389,33 @@ const services=[
           <DraftsIcon />
         </ListItemIcon>
     */}
-        <ListItemText primary="À propos" />
+        <ListItemText primary={t("À propos")} />
       </ListItemButton>
       </Link>
-      {/** 
-      <ListItemButton onClick={handleClickList}>
-      
-      
-        <ListItemText primary="Francais" />
-        {openList ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      */}
-      {/*
-      <Collapse in={openList} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
-          
-            <ListItemText primary="Anglais" />
-          </ListItemButton>
+     
+      <ListItemButton onClick={handleClickMyLangue}>
+    
+        <ListItemText primary={t('Langue')} />
+       
    
+        {openMylangue ? <ExpandLess /> : <ExpandMore />}
+      
+      </ListItemButton>
+      <Collapse in={openMylangue} timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          <ListItemButton sx={{ pl: 4 }} onClick={switchToEnglish}>
           
+            <ListItemText primary={t("Anglais")} />
+          </ListItemButton>
+          <ListItemButton sx={{ pl: 4 }} onClick={switchToFrensh}>
+          
+          <ListItemText primary={t("Francais")} />
+        </ListItemButton>
         </List>
       </Collapse>
-       */}
+    
+    
+     
       <Link to='/contact'  style={{textDecoration:'none', color:'#212121'}}  onClick={()=>setOpenDrawer(false)}>
       <ListItemButton>
          {/** 
@@ -391,7 +423,7 @@ const services=[
           <SendIcon />
         </ListItemIcon>
        */}
-        <ListItemText primary="Contactez-nous" />
+        <ListItemText primary={t("Contactez-nous")} />
       </ListItemButton>
       </Link>
     </List>

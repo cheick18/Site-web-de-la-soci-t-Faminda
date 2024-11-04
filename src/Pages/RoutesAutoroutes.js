@@ -27,7 +27,7 @@ import  securité from '../images/securité.jpg';
 
 
 
-export default function Services() {
+export default function Services({t,i18n}) {
   
   const isXs = useMediaQuery((theme) => theme.breakpoints.only('xs'));
   const isSm = useMediaQuery((theme) => theme.breakpoints.up('sm'));
@@ -56,10 +56,10 @@ export default function Services() {
 
       <Box style={{ position: 'absolute', top: 0, display: 'block', height: '470px', width: '100%' }}>
         <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
-        {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Routes, autoroutes et transports</Typography>
+        {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Routes, autoroutes et transports')}</Typography>
 
 )}
-    {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Routes, autoroutes et transports</Typography>
+    {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Routes, autoroutes et transports')}</Typography>
 
 )}
 
@@ -94,7 +94,7 @@ export default function Services() {
           </Grid>
           <Grid item md={11}  >
 
-            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >Conception et planification de routes, autoroutes et voies ferrées</Typography>
+            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >{t('Routes_auto1')}</Typography>
 
 
           </Grid>
@@ -112,7 +112,7 @@ export default function Services() {
           </Grid>
           <Grid item md={11}  >
 
-            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >Infrastructures aéroportuaires et petits ouvrages (ponceaux, dalots)</Typography>
+            <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px' }} >{t('Routes_auto2')}</Typography>
 
 
           </Grid>
@@ -145,10 +145,10 @@ export default function Services() {
   <Box style={{ position: 'absolute', top: 0, display: 'block', height: '470px', width: '100%' }}>
     <div style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)', textAlign: 'center', width: '100%' }}>
 
-    {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Routes, autoroutes et transports</Typography>
+    {isSm&&(    <Typography variant="h2" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Routes, autoroutes et transports')}</Typography>
 
          )}
-             {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >Routes, autoroutes et transports</Typography>
+             {isXs&&(  <Typography variant="h3" style={{fontSize:'2.488 rem',color:'white',fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold' }} >{t('Routes, autoroutes et transports')}</Typography>
 
          )}
      
@@ -185,8 +185,7 @@ export default function Services() {
            <CheckIcon sx={{ width: 15, height: 15}} />
            </Avatar>
         
-      <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif' ,paddingLeft:'10px'}}>Conception et planification de routes, autoroutes et voies ferrées
-</Typography>
+      <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif' ,paddingLeft:'10px'}}>{t('Routes_auto1')}</Typography>
     </Box>
  
 
@@ -206,7 +205,7 @@ export default function Services() {
    </Avatar>
 
 
-   <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px',paddingLeft:'10px',paddingBottom:'40px' }} >Infrastructures aéroportuaires et petits ouvrages (ponceaux, dalots)</Typography>
+   <Typography variant='body2' color='#9e9e9e' sx={{ fontFamily: 'Montserrat, sans-serif', paddingBlockStart: '48px',paddingLeft:'10px',paddingBottom:'40px' }} >{t('Routes_auto2')}</Typography>
 
 </Box>
 

@@ -16,6 +16,7 @@ import { Modal as BaseModal } from '@mui/base/Modal';
 import Footer from '../Components/Footer';
 import { useEffect } from 'react';
 import { Modal  } from '@mui/base/Modal';
+import Loading from '../Components/Loading';
 export default function Contact() {
   const Backdrop = React.forwardRef((props, ref) => {
     const { open, className, ...other } = props;
@@ -192,8 +193,9 @@ export default function Contact() {
       setMessage('')
       setNumber('')
       setName('')
-      
+      setLoading(false)
   } catch (err) {
+    setLoading(false)
       console.log('Failed to send message. Please try again.',err);
   }
 }
@@ -230,19 +232,10 @@ export default function Contact() {
   };
  
 
-  if(loading){
+  if(loading==true){
     return (
-      <div style={{display:'block',backgroundColor:'red', margin:'auto'}}>
+     <Loading />
 
-   
-      <Backdrop
-  sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
-  open={loading}
-
->
-  <CircularProgress color="inherit" />
-</Backdrop>
-</div>
     )
   }
  else{
