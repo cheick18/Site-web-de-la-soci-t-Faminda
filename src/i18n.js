@@ -18,7 +18,7 @@ const resources = {
         "Faminda Concept":" Faminda Concept, Engineering and Architecture Design Office",
         "Faminda description":"Faminda is a design office specialized in civil engineering and architecture. We offer a comprehensive range of services to meet the needs of our clients across various fields",
         "Anglais":"English",
-        "Francais":"Frensh",
+        "Francais":"French",
         "À Découvrir : Nos Projets":"To Discover: Our Projects",
         "Nous Construisons L'avenir":"We Build the Future",
         "Découvrez Notre Savoir-Faire":"Discover Our Expertise",
